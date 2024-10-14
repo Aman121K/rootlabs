@@ -1,0 +1,27 @@
+.ball {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.fall {
+  opacity: 1;
+  animation: fall 2.5s ease-out forwards, moveToSide 2.5s 2.5s ease-out forwards; /* Added moveToSide after fall */
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(var(--posY, -500px)) translateX(0); /* Starting from the center */
+  }
+  100% {
+    transform: translateY(0) translateX(0); /* Reached the bottom */
+  }
+}
+
+@keyframes moveToSide {
+  0% {
+    transform: translateY(0) translateX(0); /* At the bottom */
+  }
+  100% {
+    transform: translateY(0) translateX(var(--moveX, 0)); /* Move left or right */
+  }
+}
