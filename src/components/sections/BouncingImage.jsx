@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import ball from "../../../assets/ball.png"; // Use the correct path to your image
+import ball from "../../../assets/ball1.png"; // Use the correct path to your image
 
 // BouncingImage Component
 const BouncingImage = () => {
