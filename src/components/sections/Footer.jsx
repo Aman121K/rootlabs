@@ -3,11 +3,12 @@ import BouncingImage from "./BouncingImage.jsx";
 import footer_arrow from "../../../assets/footer_arrow.svg";
 import root_footer from "../../../assets/root_footer.svg";
 import labs_footer from "../../../assets/labs_footer.svg";
+import { Link } from "react-router-dom";
 
 const GeneratedComponent = () => {
   const hyperlinks = [
     {
-      name: "SHOP",
+      name: "PRODUCTS",
       list: [
         {
           name: "Ashwagandha",
@@ -28,7 +29,7 @@ const GeneratedComponent = () => {
       ],
     },
     {
-      name: "ABOUT",
+      name: "PAGES",
       list: [
         {
           name: "Ashwagandha",
@@ -46,10 +47,14 @@ const GeneratedComponent = () => {
           name: "Sea Moss",
           link: "/our-products",
         },
+        {
+          name: "Contact Us",
+          link: "/contactForm",
+        },
       ],
     },
     {
-      name: "CONNECT",
+      name: "SOCIALS",
       list: [
         {
           name: "Instagram",
@@ -132,17 +137,17 @@ const GeneratedComponent = () => {
           <div
             key={index}
             id="_64_1142_Frame_1820554732"
-            style={{
-              position: "relative",
-              height: "148.0px",
-              width: "154.0px",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "flex-start",
-              alignItems: "flex-start",
-              flexWrap: "nowrap",
-              gap: "8px",
-            }}
+            // style={{
+            //   position: "relative",
+            //   height: "148.0px",
+            //   width: "154.0px",
+            //   display: "flex",
+            //   flexDirection: "column",
+            //   justifyContent: "flex-start",
+            //   alignItems: "flex-start",
+            //   flexWrap: "nowrap",
+            //   gap: "8px",
+            // }}
           >
             <span
               id="SHOP"
@@ -282,11 +287,7 @@ const GeneratedComponent = () => {
           style={{ position: "relative", width: "calc(50% - 64px)" }}
         />
       </div>
-      {
-        isAnimating ? (
-          <BouncingImage />
-        ) : <></>
-      }
+      {isAnimating ? <BouncingImage /> : <></>}
       <div
         id="_64_1201_Frame_1820554877"
         style={{
@@ -335,7 +336,13 @@ const GeneratedComponent = () => {
             position: "relative",
           }}
         >
-          Terms &amp; Conditions
+          <Link
+            to="/terms-and-conditions" 
+            style={{ color: "#e8ddd3ff", textDecoration: "none" }} // Optional styles for the link
+          >
+            Terms &amp; Conditions
+          </Link>
+          {/* Terms &amp; Conditions */}
         </span>
       </div>
     </div>

@@ -5,7 +5,7 @@ import cart from "../../../assets/cart.svg";
 import Cart from "./Cart";
 import { RxCross2 } from "react-icons/rx";
 
-const GeneratedComponent = () => {
+const GenerateComponent = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [hovered, setHovered] = React.useState(false);
@@ -61,7 +61,7 @@ const GeneratedComponent = () => {
       position: "absolute",
       background: "rgba(19, 82, 59, 1.00)",
       borderRadius: "360px",
-      height: "6px",
+      height: "3px",
       width: "6px",
       left: "50%",
       top: "23px",
@@ -75,7 +75,15 @@ const GeneratedComponent = () => {
       fontWeight: "430",
       lineHeight: "20px",
       whiteSpace: "nowrap",
+      // display: 'block',
     },
+
+    // "@media (max-width: 768px)": {
+    //   navText: {
+    //     display: "none", // Hide text on small screens
+    //   },
+    // },
+
     cartIconWrapper: {
       position: "relative",
       overflow: "hidden",
@@ -190,27 +198,12 @@ const GeneratedComponent = () => {
                 right: "20px",
               }}
             />
-            <span
-              style={styles.menuItem}
-              onClick={() => navigate("/")}
-            >
+            <span style={styles.menuItem} onClick={() => navigate("/")}>
               Our Products
             </span>
-            <span
-              style={styles.menuItem}
-            >
-              Our Science
-            </span>
-            <span
-              style={styles.menuItem}
-            >
-              Our Story
-            </span>
-            <span
-              style={styles.menuItem}
-            >
-              Our Roots
-            </span>
+            <span style={styles.menuItem}>Our Science</span>
+            <span style={styles.menuItem}>Our Story</span>
+            <span style={styles.menuItem}>Our Roots</span>
             <div
               id="_64_705_Button_default2"
               onClick={() => navigate("/product")}
@@ -248,10 +241,11 @@ const GeneratedComponent = () => {
           style={{ ...styles.innerRow, gap: "42px" }}
         >
           <div id="_64_682_Frame_1820554662" style={styles.textWithDot}>
-            <span style={{ color: "#13523bff", fontWeight: "670" }}>
+            {/* <span style={{ color: "#13523bff", fontWeight: "670" }}> */}
+            <span style={styles.navText}>
               Our Products
             </span>
-            <div id="dotOfHeader" style={styles.dot}></div>
+            <div id="dotOfHeader" style={{...styles.dot, width:0}}></div>
           </div>
 
           <div className="not_selected_route" style={styles.textWithDot}>
@@ -268,7 +262,12 @@ const GeneratedComponent = () => {
           <div
             id="_64_686_design"
             onClick={() => navigate("/")}
-            style={{ height: "48px", width: "82px", position: "relative", cursor: "pointer" }}
+            style={{
+              height: "48px",
+              width: "82px",
+              position: "relative",
+              cursor: "pointer",
+            }}
           >
             <img src={logo} alt="Group" />
           </div>
@@ -329,7 +328,7 @@ const GeneratedComponent = () => {
                 style={{ position: "absolute", left: "9.375%", top: "12.5%" }}
               />
             </div>
-            <span style={{ ...styles.navText, fontWeight: "500" }}>Cart</span>
+            <span className="hidden md:block" style={{ ...styles.navText, fontWeight: "500" }}>Cart</span>
           </div>
 
           <div
@@ -352,4 +351,4 @@ const GeneratedComponent = () => {
   );
 };
 
-export default GeneratedComponent;
+export default GenerateComponent;

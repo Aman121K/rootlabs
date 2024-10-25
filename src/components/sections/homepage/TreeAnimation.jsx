@@ -196,7 +196,6 @@ const GeneratedComponent = () => {
     { tSeaMoss: tSeaMoss, scale : 0.9, s : [44, 43.67669105529785] },
     { tAshwagandha: tAshwagandha, scale : 1.5, s : [54, 53.67669105529785] },
     { tShilajitRocks: tShilajitRocks, scale : 1 , s : [44, 43.67669105529785]},
-    // Add more sets as needed
   ];
 
   const generateLottieVariants = async () => {

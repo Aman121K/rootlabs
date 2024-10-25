@@ -35,7 +35,7 @@ const ButtonComponent = ({
     green: {
       borderColor: '#13523b',
       containerBg: '#13523b',
-      hoverContainerBg: '#1C644A',
+      hoverContainerBg: '#13523b',
       labelColor: 'white',
       arrowBg: 'white',
       arrowColor: '#13523b',

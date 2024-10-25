@@ -26,7 +26,8 @@ const GeneratedComponent = () => {
       className="mobile_section_padding"
       style={{
         position: "relative",
-        background: "rgba(242, 240, 232, 1.00)",
+        // background: "rgba(242, 240, 232, 1.00)",
+        background: "#F2F0E8FF",
         height: "fit-content",
         display: "flex",
         flexDirection: "row",
@@ -302,7 +303,7 @@ const GeneratedComponent = () => {
         style={{
           borderRadius: "26px",
           // height: "522px",
-          width: "500px",
+          width: "800px",
           mixBlendMode: "darken",
         }}
       >

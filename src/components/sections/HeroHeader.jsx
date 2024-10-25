@@ -171,7 +171,7 @@ const GeneratedComponent = () => {
             className="TEXT_HEADING_STYLE"
             style={{
               fontSize: "72.0px",
-              fontWeight: "280",
+              fontWeight: "400",
               fontFamily: "Reckless TRIAL",
               lineHeight: "120%",
               letterSpacing: "-3.0%",
@@ -184,7 +184,7 @@ const GeneratedComponent = () => {
                 fontFamily: "Reckless TRIAL",
                 // fontWeight: "lighter",
                 color: "#13523B",
-                fontWeight: "400",
+                fontWeight: "500",
                 fontStyle: "italic"
               }}> nature.</span> <br />
             Perfected in <span
@@ -193,7 +193,7 @@ const GeneratedComponent = () => {
                 // fontWeight: "lighter",
                 color: "#13523B",
                 fontStyle: "italic",
-                fontWeight: "400",
+                fontWeight: "500",
               }}> science.</span>
           </span>
 
