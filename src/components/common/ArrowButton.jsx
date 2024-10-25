@@ -18,7 +18,7 @@ const ButtonComponent = ({
       borderColor: '#13523b',
       containerBg: 'rgba(242, 240, 232, 1.00)',
       hoverContainerBg: '#f0f0f0',
-      labelColor: '#13523b',
+      // labelColor: '#13523b',
       arrowBg: 'rgba(19, 82, 59, 1.00)',
       arrowColor: 'white',
       url: arrow

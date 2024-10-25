@@ -37,13 +37,13 @@ const GeneratedComponent = () => {
 
       <OurProducts />
 
-      <TreeAnimation/>
+      <TreeAnimation />
 
-      <ProductAnimation/>
+      <ProductAnimation />
 
       <Testimonial />
-      
-      <OurServiceGraph/>
+
+      <OurServiceGraph />
 
       <OurStudy />
 
@@ -52,7 +52,7 @@ const GeneratedComponent = () => {
 
 
       {/* <Social /> */}
-      
+
       <Footer />
 
     </div>

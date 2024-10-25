@@ -52,8 +52,8 @@ body {
   margin: 50px auto;
   padding: 12px 24px;
   font-size: 16px;
-  background-color: #13523b;
-  color: white;
+  /* background-color: #13523b; */
+  color: black;
   border: none;
   border-radius: 20px;
   cursor: pointer;

@@ -41,13 +41,12 @@ const GeneratedComponent = () => {
       <div
         id="_64_709_Frame_2018776287"
         style={{
-          position: "relative",
-          height: "fit-content",
+          flex: "1 1 45%", 
+          maxWidth: "500px",
           display: "flex",
           flexDirection: "column",
           justifyContent: "flex-start",
           alignItems: "flex-start",
-          flexWrap: "nowrap",
           gap: "24px",
         }}
       >
@@ -303,7 +302,7 @@ const GeneratedComponent = () => {
         style={{
           borderRadius: "26px",
           // height: "522px",
-          width: "800px",
+          width: "1000px",
           mixBlendMode: "darken",
         }}
       >
