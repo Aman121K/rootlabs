@@ -32,7 +32,7 @@ const GeneratedComponent = () => {
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
-        gap: "115px",
+        // gap: "115px",
         flexWrap: "wrap",
         alignItems: "center",
         padding: "40px 132px ",
@@ -41,13 +41,12 @@ const GeneratedComponent = () => {
       <div
         id="_64_709_Frame_2018776287"
         style={{
-          position: "relative",
-          height: "fit-content",
+          flex: "1 1 45%", 
+          maxWidth: "500px",
           display: "flex",
           flexDirection: "column",
           justifyContent: "flex-start",
           alignItems: "flex-start",
-          flexWrap: "nowrap",
           gap: "24px",
         }}
       >
@@ -303,7 +302,7 @@ const GeneratedComponent = () => {
         style={{
           borderRadius: "26px",
           // height: "522px",
-          width: "800px",
+          width: "700px",
           mixBlendMode: "darken",
         }}
       >

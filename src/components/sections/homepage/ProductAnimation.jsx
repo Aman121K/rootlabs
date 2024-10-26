@@ -7,6 +7,18 @@ import gummies from "../../../../assets/RENDER 14.mp4.lottie60fps30.json";
 import animationData from "../../../../assets/roundGummies.json";
 
 const GeneratedComponent = () => {
+  <style>
+    {`
+          @keyframes rotate {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
+          }
+        `}
+  </style>
   const animation = "slideUp 0.7s ease-in forwards";
   const textRef = useIntersectionAnimation(animation, { threshold: 0.1 });
   const [animationProgress, setAnimationProgress] = useState(0);
@@ -77,9 +89,9 @@ const GeneratedComponent = () => {
         const lottie1Progress = Math.min(1, scrollProgress * 2); // Scale progress for first Lottie
         const lottie2Progress = Math.min(Math.min(1, scrollProgress * 2), 0.3903604); // 3.603604 Scale progress for second Lottie
         // lottieRef2.current.style.transform = `translateY( -${scrollProgress}px)`; // Move the second Lottie animation
-        if (lottieRef1.current) {
-          lottieRef1.current.goToAndStop(lottie1Progress * 200, true); // Assuming 100 frames
-        }
+        // if (lottieRef1.current) {
+        //   lottieRef1.current.goToAndStop(lottie1Progress * 200, true); // Assuming 100 frames
+        // }
 
         if (lottieRef2.current) {
           lottieRef2.current.goToAndStop(lottie2Progress * 60, true); // Assuming 100 frames
@@ -105,7 +117,7 @@ const GeneratedComponent = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        height:"1100px"
+        height: "1100px"
       }}
     >
       <div
@@ -185,6 +197,7 @@ const GeneratedComponent = () => {
       <div
         ref={animationContainerRef}
         style={{
+          textAlign:"center",
           position: "relative",
           width: "200%",
           maxWidth: "1000px",
@@ -192,14 +205,13 @@ const GeneratedComponent = () => {
           // top:"-200px"
         }}
       >
-
         <Lottie
           id="product_animation_lottie"
           style={{
             position: "absolute",
-            width: "70%",
+            width: "85%",
             top: "27%",
-            left:"15%",
+            left: "5%",
             // bottom:"5%"
             // transform: "translateX(-50%)",
           }}
@@ -208,35 +220,35 @@ const GeneratedComponent = () => {
           loop={false}
           autoplay={false} // Autoplay is false since we're controlling progress via scroll
         />
-        <Lottie
-          style={{
-            // left: "50%",
-            // transform: "translateX(-50%)",
-            position: "absolute",
-            width: "70%",
-            left:"15%",
-            // minWidth: "500px"
-          }}
-          id="firstLottie"
-          lottieRef={lottieRef1}
-          animationData={animationData}
-          loop={false}
-          autoplay={false} // Autoplay is false for scroll control
-        />
-         <div style={{
-      width: '200px',
-      height: '400px',
-      transform: 'rotate(90deg) ',
-      position: 'absolute',
-      bottom:"-10%",
-      left:"40%",
-      filter:"blur(10px)",
-      background: 'radial-gradient(circle at -30% 50%, transparent 10%, #F2F0E8 51%)',
-      borderRadius: '50%',
-    }}>
-    </div>
+          <Lottie
+            style={{
+              // left: "50%",
+              // transform: "translateX(-50%)",
+              position: "absolute",
+              width: "85%",
+              left: "5%",
+              // minWidth: "500px"
+            }}
+            id="firstLottie"
+            lottieRef={lottieRef1}
+            animationData={animationData}
+            loop={true}
+            autoplay={true} // Autoplay is false for scroll control
+          />
+        </div>
+        <div style={{
+          width: '200px',
+          height: '400px',
+          transform: 'rotate(90deg) ',
+          position: 'absolute',
+          bottom: "-10%",
+          left: "40%",
+          filter: "blur(10px)",
+          background: 'radial-gradient(circle at -30% 50%, transparent 10%, #F2F0E8 51%)',
+          borderRadius: '50%',
+        }}>
+        </div>
       </div>
-    </div>
   );
 };
 

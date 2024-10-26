@@ -1,4 +1,5 @@
 import React from 'react';
+import './LoopingText.css';
 
 const LoopingText = () => {
     return (
@@ -10,23 +11,22 @@ const LoopingText = () => {
                 gap: "20px",
                 opacity: "0.5",
                 fontStyle: "italic",
-                margin:"0px -60px",
-                overflow: "hidden", // Hide overflowing elements
-                width: "100vw", // Full viewport width
+                margin: "0px -60px",
+                overflow: "hidden",
+                width: "100vw",
             }}
         >
             <div
+                className="scrolling-content" // Apply class for animation
                 style={{
                     display: "flex",
                     flexDirection: "row",
                     gap: "20px",
                     justifyContent: "center",
                     alignItems: "center",
-                    animation: "scroll 20s linear infinite", // Smooth scrolling animation
-                    whiteSpace: "nowrap", // Keep the text on one line
+                    whiteSpace: "nowrap",
                 }}
             >
-                {/* Duplicating the content to achieve seamless looping */}
                 {Array(2)
                     .fill(0)
                     .map((_, outerIndex) => (
@@ -45,7 +45,6 @@ const LoopingText = () => {
                                                 textAlign: "left",
                                                 whiteSpace: "nowrap",
                                                 textDecoration: "italic",
-
                                             }}
                                         >
                                             {item}

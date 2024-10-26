@@ -6,7 +6,7 @@
     height: 44px;
     display: flex;
     align-items: center;
-    padding: 4px 4px 4px 24px;
+    padding: 4px 4px 4px 4px;
     cursor: pointer;
     position: relative;
   }

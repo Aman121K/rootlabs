@@ -23,73 +23,64 @@ const useQuery = () => {
 function ProductPage() {
   const query = useQuery();
   const productHandle = query.get("productHandle");
-
   const [isMobileLayout, setIsMobileLayout] = useState(
     window.innerWidth <= 768
   );
-
   const [quantity, setQuantity] = useState(1);
+  const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    // Function to update the layout based on screen width
     const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setIsMobileLayout(true);
-      } else {
-        setIsMobileLayout(false);
-      }
+      setIsMobileLayout(window.innerWidth <= 768);
     };
-
-    // Add resize event listener
     window.addEventListener("resize", handleResize);
 
     const fetchProducts = async () => {
-        try {
-          const products = await StoreFront.fetchAllProducts(1, 5, true);
-  
-          if (products) {
-            setProduct(products[0].node);
-            initializeQuantity(products[0].node.handle);
-          }
-        } catch (error) {
-          console.error("Error fetching products:", error);
+      try {
+        const products = await StoreFront.fetchAllProducts(1, 5, true);
+        if (products) {
+          setProduct(products[0].node);
+          initializeQuantity(products[0].node.handle);
         }
-      };
-      const fetchProduct = async () => {
-        try {
-          const product = await StoreFront.fetchProductByHandle(productHandle, 5, true);
-          console.log(product);
-          
-          if (product) {
-            setProduct(product);
-          }
-        } catch (error) {
-          console.error("Error fetching products:", error);
-        }
-      };
-      const initializeQuantity = (productHandle) => {
-        const existingCart = JSON.parse(localStorage.getItem("cartItems")) || [];
-        const existingItem = existingCart.find(item => item.productHandle === productHandle);
-    
-        // If the product exists in localStorage, set the quantity from there
-        if (existingItem) {
-          setQuantity(existingItem.quantity);
-        }
-      };
-      if (!productHandle) {
-        fetchProducts();
-      } else {
-        fetchProduct();
-        initializeQuantity(productHandle);
+      } catch (error) {
+        console.error("Error fetching products:", error);
       }
+    };
 
-    // Clean up event listener on unmount
+    const fetchProduct = async () => {
+      try {
+        const product = await StoreFront.fetchProductByHandle(
+          productHandle,
+          5,
+          true
+        );
+        if (product) {
+          setProduct(product);
+        }
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    const initializeQuantity = (productHandle) => {
+      const existingCart = JSON.parse(localStorage.getItem("cartItems")) || [];
+      const existingItem = existingCart.find(
+        (item) => item.productHandle === productHandle
+      );
+      if (existingItem) {
+        setQuantity(existingItem.quantity);
+      }
+    };
+
+    if (!productHandle) {
+      fetchProducts();
+    } else {
+      fetchProduct();
+      initializeQuantity(productHandle);
+    }
+
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // Initialize state for storing products
-  const [product, setProduct] = useState([]);
-  
+  }, [productHandle]);
 
   return (
     <div
@@ -117,29 +108,66 @@ function ProductPage() {
           flexDirection: isMobileLayout ? "column" : "row",
         }}
       >
-        <ProductImages images={product?.images?.edges} isMobileLayout={isMobileLayout} />
-        <ProductDetails product={product} quantity={quantity} setQuantity={setQuantity}/>
+        <div
+          style={{
+            flex: 1,
+            overflowY: "auto",
+            maxHeight: "80vh",
+            paddingRight: "20px",
+            scrollbarWidth: "none",
+          }}
+        >
+          <ProductImages
+            images={product?.images?.edges}
+            isMobileLayout={isMobileLayout}
+          />
+        </div>
+
+        <div
+          style={{
+            position: "sticky",
+            top: "120px",
+            flexBasis: isMobileLayout ? "100%" : "40%",
+            display: "flex",
+            flexDirection: "column",
+            gap: 30,
+          }}
+        >
+          <ProductDetails
+            product={product}
+            quantity={quantity}
+            setQuantity={setQuantity}
+          />
+        </div>
       </div>
+
       <Rating />
       <Technology />
       <HowItWorks />
       <Ingredients />
-      <div style={{display: "flex", flexDirection: "column", gap: 0, padding: "0px 16px 80px 16px"}}>
-      <CustomerTestimonial />
       <div
-        id="_64_1103_Button_default2"
         style={{
-          position: "relative",
-          height: "48px",
-          width: "200px",
-          alignSelf: "center",
+          display: "flex",
+          flexDirection: "column",
+          gap: 0,
+          padding: "0px 16px 80px 16px",
         }}
       >
-        <ArrowButton
-          label="Learn More"
-          onClick={() => window.scrollTo(0, 0)}
-        />
-      </div>
+        <CustomerTestimonial />
+        <div
+          id="_64_1103_Button_default2"
+          style={{
+            position: "relative",
+            height: "48px",
+            width: "220px",
+            alignSelf: "center",
+          }}
+        >
+          <ArrowButton
+            label="Read More"
+            onClick={() => window.scrollTo(0, 0)}
+          />
+        </div>
       </div>
       <DoctorsSay />
       <Reviews />

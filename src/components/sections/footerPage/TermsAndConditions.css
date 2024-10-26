@@ -41,10 +41,12 @@ body {
 }
 
 .terms-regular {
-  font-size: 16px;
-  font-weight: 430;
-  line-height: 32px;
-  /* font-family: "Matter-TRIAL", sans-serif;  */
+  display: -webkit-box; /* For Safari */
+  display: block;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: 4.5em; /* Adjust according to your line height for 3 lines (assuming 1.5em per line) */
+  transition: opacity 0.3s ease; /* Transition for smooth effect */
 }
 
 .button-label {
@@ -52,8 +54,8 @@ body {
   margin: 50px auto;
   padding: 12px 24px;
   font-size: 16px;
-  background-color: #13523b;
-  color: white;
+  /* background-color: #13523b; */
+  color: black;
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -64,8 +66,43 @@ body {
 .heading-2 {
   font-family: "ariel", sans-serif;
   color: #13523b;
+  font-size: 45px;
+  font-weight: 400;
 }
 
+.faded-text {
+  opacity: 0.5; /* Makes the text faded */
+}
+.expanded {
+  display: block; /* Ensure that the full text is displayed when expanded */
+  opacity: 1; /* Full opacity for expanded text */
+  max-height: none; /* Allow full height */
+}
+
+
+/* Button Styling */
+.button-label {
+  display: block;
+  margin: 50px auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.heading-2 {
+  font-family: "ariel", sans-serif;
+  color: #13523b;
+  transition: opacity 0.4s ease;
+}
+
+.hidden {
+  display: none; /* Hide extra text by default */
+}
 @media (max-width: 768px) {
   .terms-container {
     padding: 10px;

@@ -11,6 +11,7 @@ import CustomerTestimonial from "../components/sections/homepage/CustomerTestimo
 import OurStudy from "../components/sections/homepage/OurStudy.jsx";
 import Social from "../components/sections/homepage/Social.jsx";
 import Footer from "../components/sections/Footer.jsx";
+import CookiePopup from "../components/cookiePoopup/CookiePopup.jsx";
 
 const GeneratedComponent = () => {
   const navigate = useNavigate();
@@ -37,22 +38,23 @@ const GeneratedComponent = () => {
 
       <OurProducts />
 
-      <TreeAnimation/>
+      <TreeAnimation />
 
-      <ProductAnimation/>
+      <ProductAnimation />
 
       <Testimonial />
-      
-      <OurServiceGraph/>
+
+      <OurServiceGraph />
 
       <OurStudy />
 
 
       <CustomerTestimonial />
 
+      <CookiePopup />
 
       {/* <Social /> */}
-      
+
       <Footer />
 
     </div>

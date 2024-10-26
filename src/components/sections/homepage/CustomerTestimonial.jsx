@@ -68,8 +68,8 @@ const GeneratedComponent = () => {
               fontFamily: "Reckless TRIAL Regular Italic"
             }}>
               Customers
-              </span> Speak
-            
+            </span> Speak
+
           </span>
         </div>
 
@@ -351,32 +351,32 @@ const GeneratedComponent = () => {
         {[
           {
             image:
-            customer1,
+              customer1,
             name: "Shannon Decker",
             description:
               "The ashwagandha gummy has been a game-changer for me! It helped me through stressful days and I also noticed a significant improvement in my energy levels.",
           },
           {
             image:
-            customer2,
+              customer2,
             name: "Shannon Decker",
             description:
               "The ashwagandha gummy has been a game-changer for me! It helped me through stressful days and I also noticed a significant improvement in my energy levels.",
           },
           {
             image:
-            customer1,
+              customer1,
             name: "Shannon Decker",
             description:
               "The ashwagandha gummy has been a game-changer for me! It helped me through stressful days and I also noticed a significant improvement in my energy levels.",
           }
-          
+
         ].map((item, index) => (
-        <CustomerCard key={index} item={item} index={index}/>
+          <CustomerCard key={index} item={item} index={index} />
         ))}
       </div>
 
-     
+
     </div>
   );
 };

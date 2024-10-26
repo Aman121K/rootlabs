@@ -50,7 +50,7 @@ function CustomerCard({ item, index }) {
                   height: "548px",
                   width: "100%",
                   mixBlendMode: "multiply",
-                  transition: "opacity 0.2s ease-in",
+                  transition: "opacity 1s ease-in",
                 }}
               ></div>
             </div>
@@ -135,7 +135,7 @@ function CustomerCard({ item, index }) {
                 gap: "16px",
                 overflow: "hidden",
                 transform: isHovered ? "translateY(0%)" : "translateY(130%)",
-                transition: "transform 0.3s ease-in",
+                transition: "transform 0.7s ease-in",
               }}
             >
               <span

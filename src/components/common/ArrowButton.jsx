@@ -17,8 +17,7 @@ const ButtonComponent = ({
     default: {
       borderColor: '#13523b',
       containerBg: 'rgba(242, 240, 232, 1.00)',
-      hoverContainerBg: '#f0f0f0',
-      labelColor: '#13523b',
+      hoverContainerBg: 'rgba(242, 240, 232, 1.00)',
       arrowBg: 'rgba(19, 82, 59, 1.00)',
       arrowColor: 'white',
       url: arrow
@@ -26,7 +25,7 @@ const ButtonComponent = ({
     white: {
       borderColor: '#ffffff',
       containerBg: 'rgba(242, 240, 232, 1.00)',
-      hoverContainerBg: '#f0f0f0',
+      hoverContainerBg: 'rgba(242, 240, 232, 1.00)',
       labelColor: '#13523b',
       arrowBg: '#13523b',
       arrowColor: 'white',
