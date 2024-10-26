@@ -9,9 +9,9 @@ import Testimonial from "../components/sections/homepage/Testimonial.jsx";
 import OurServiceGraph from "../components/sections/homepage/OurServiceGraph.jsx";
 import CustomerTestimonial from "../components/sections/homepage/CustomerTestimonial.jsx";
 import OurStudy from "../components/sections/homepage/OurStudy.jsx";
-import Social from "../components/sections/homepage/Social.jsx";
+// import Social from "../components/sections/homepage/Social.jsx";
 import Footer from "../components/sections/Footer.jsx";
-import CookiePopup from "../components/cookiePoopup/CookiePopup.jsx";
+import Cookies from "../components/cookiePoopup/Cookies.jsx";
 
 const GeneratedComponent = () => {
   const navigate = useNavigate();
@@ -51,9 +51,8 @@ const GeneratedComponent = () => {
 
       <CustomerTestimonial />
 
-      <CookiePopup />
+      <Cookies />
 
-      {/* <Social /> */}
 
       <Footer />
 

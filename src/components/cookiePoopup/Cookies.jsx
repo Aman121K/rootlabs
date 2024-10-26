@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./CookiePopup.css";
+import "./Cookies.css";
 
-const CookiePopup = () => {
+const Cookies = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [showBanner, setShowBanner] = useState(false);
 
@@ -54,4 +54,4 @@ const CookiePopup = () => {
   )
 };
 
-export default CookiePopup;
+export default Cookies;
