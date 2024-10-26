@@ -14,7 +14,7 @@ import tGokshura from "../../../../assets/gokshura.png";
 import tSeaMoss from "../../../../assets/spice2.svg";
 import tShilajitRocks from "../../../../assets/spice4.svg";
 
-import semicircle from '../../../../assets/ellipse.svg'
+import semicircle from "../../../../assets/ellipse.svg";
 
 const GeneratedComponent = () => {
   const inulinIA = useIntersectionAnimation("slideUp 0.7s ease-in forwards", {
@@ -180,22 +180,22 @@ const GeneratedComponent = () => {
 
   const convertImageUrlToBase64 = async (url) => {
     const response = await fetch(url);
-    const blob = await response.blob();  // Convert to Blob
-  
+    const blob = await response.blob(); // Convert to Blob
+
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
-      reader.onloadend = () => resolve(reader.result);  // Base64 string
+      reader.onloadend = () => resolve(reader.result); // Base64 string
       reader.onerror = (err) => reject(err);
-      reader.readAsDataURL(blob);  // Convert Blob to base64
+      reader.readAsDataURL(blob); // Convert Blob to base64
     });
   };
 
   const imageSets = [
-    { tBlackMuesli: tBlackMuesli, scale : 1.5 , s : [54, 53.67669105529785]},
-    { tGokshura: tGokshura, scale : 1.5, s : [54, 53.67669105529785] },
-    { tSeaMoss: tSeaMoss, scale : 0.9, s : [44, 43.67669105529785] },
-    { tAshwagandha: tAshwagandha, scale : 1.5, s : [54, 53.67669105529785] },
-    { tShilajitRocks: tShilajitRocks, scale : 1 , s : [44, 43.67669105529785]},
+    { tBlackMuesli: tBlackMuesli, scale: 1.5, s: [54, 53.67669105529785] },
+    { tGokshura: tGokshura, scale: 1.5, s: [54, 53.67669105529785] },
+    { tSeaMoss: tSeaMoss, scale: 0.9, s: [44, 43.67669105529785] },
+    { tAshwagandha: tAshwagandha, scale: 1.5, s: [54, 53.67669105529785] },
+    { tShilajitRocks: tShilajitRocks, scale: 1, s: [44, 43.67669105529785] },
   ];
 
   const generateLottieVariants = async () => {
@@ -203,31 +203,30 @@ const GeneratedComponent = () => {
       imageSets.map(async (image) => {
         // Create a deep copy of the original Lottie JSON data
         const updatedData = JSON.parse(JSON.stringify(animationData));
-        
+
         const [imageKey, imageValue] = Object.entries(image)[0];
 
         // Convert image URL to base64
         const base64Image = await convertImageUrlToBase64(imageValue);
-  
+
         // Assuming the image is at index 0 in the Lottie JSON assets
         updatedData.assets[0].p = base64Image;
 
-        updatedData.assets[0].w = 266/image.scale;
-        updatedData.assets[0].h = 216/image.scale;
+        updatedData.assets[0].w = 266 / image.scale;
+        updatedData.assets[0].h = 216 / image.scale;
 
         updatedData.layers[2].ks.p.k[1].s = image.s;
-  
+
         return updatedData;
       })
     );
-  
+
     return variants;
   };
 
   const [lottieVariants, setLottieVariants] = useState([]);
 
   useEffect(() => {
-
     // Generate multiple Lottie JSONs
     const generateLottieVariant = async () => {
       const variants = await generateLottieVariants();
@@ -236,6 +235,18 @@ const GeneratedComponent = () => {
 
     generateLottieVariant();
   }, []);
+
+  const labelStyle = {
+    position: "absolute",
+    // bottom: "-20px", // Adjust as needed
+    left: "50%",
+    // transform: "translateX(-50%)",
+    color: "white",
+    fontSize: isSmallLayout ? "18px" : "20px",
+    fontFamily: "Matter-TRIAL",
+    // textShadow:
+    //   "0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6)",
+  };
 
   return (
     <div
@@ -541,20 +552,6 @@ const GeneratedComponent = () => {
                 fontSize: isSmallLayout ? "18px" : "25px",
               }}
             >
-              {/* <Spice
-                withBg={true}
-                width={isSmallLayout ? 120 : 200}
-                height={isSmallLayout ? 120 : 200}
-              />
-              <div style={{
-                position: "absolute",
-                left: '80%',
-                bottom: '50%',
-                transform: "translateY(-50%)",
-                color: "white"
-              }}>
-                Inulin
-              </div> */}
               <Lottie
                 lottieRef={spicesRef.current[0]}
                 style={{
@@ -565,21 +562,7 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
-              {/* <span
-                ref={inulinIA}
-                style={{
-                  position: "absolute",
-                  left: "85%",
-                  top: "65%",
-                  transform: "translateY(-50%)",
-                  color: "white",
-                  fontSize: isSmallLayout ? "15px" : "24px",
-                  fontFamily: "Matter-TRIAL",
-                }}
-              >
-                {" "}
-                Inulin
-              </span> */}
+              <div style={labelStyle}>Inulin</div>
             </div>
 
             <div
@@ -592,20 +575,6 @@ const GeneratedComponent = () => {
                 fontSize: isSmallLayout ? "18px" : "25px",
               }}
             >
-              {/* <Spice
-                withBg={false}
-                width={isSmallLayout ? 80 : 150}
-                height={isSmallLayout ? 80 : 150}
-              />
-              <div style={{
-                position: "absolute",
-                left: '35%',
-                bottom: '-10%',
-                transform: "translateX(-50%)",
-                color: "white"
-              }}>
-                Shilajit
-              </div> */}
               <Lottie
                 lottieRef={spicesRef.current[1]}
                 style={{
@@ -616,6 +585,7 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
+              <div style={labelStyle}>Shilajit</div>
             </div>
 
             <div
@@ -628,20 +598,6 @@ const GeneratedComponent = () => {
                 fontSize: isSmallLayout ? "18px" : "25px",
               }}
             >
-              {/* <Spice
-                withBg={false}
-                width={isSmallLayout ? 80 : 150}
-                height={isSmallLayout ? 80 : 150}
-              />
-              <div style={{
-                position: "absolute",
-                left: '35%',
-                bottom: '-10%',
-                transform: "translateX(-50%)",
-                color: "white"
-              }}>
-                Goshura
-              </div> */}
               <Lottie
                 lottieRef={spicesRef.current[2]}
                 style={{
@@ -652,6 +608,7 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
+              <div style={labelStyle}>Gokshura</div>
             </div>
 
             <div
@@ -664,20 +621,6 @@ const GeneratedComponent = () => {
                 fontSize: isSmallLayout ? "18px" : "25px",
               }}
             >
-              {/* <Spice
-                withBg={false}
-                width={isSmallLayout ? 80 : 150}
-                height={isSmallLayout ? 80 : 150}
-              />
-              <div style={{
-                position: "absolute",
-                left: '0%',
-                bottom: '0%',
-                transform: "translateX(-50%)",
-                color: "white"
-              }}>
-                Goshura
-              </div> */}
               <Lottie
                 lottieRef={spicesRef.current[3]}
                 style={{
@@ -688,6 +631,7 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
+              <div style={labelStyle}>Gokshura</div>
             </div>
 
             <div
@@ -700,21 +644,6 @@ const GeneratedComponent = () => {
                 fontSize: isSmallLayout ? "18px" : "25px",
               }}
             >
-              {/* <Spice
-                withBg={false}
-                width={isSmallLayout ? 80 : 150}
-                height={isSmallLayout ? 80 : 150}
-              />
-              <div style={{
-                position: "absolute",
-                left: '35%',
-                bottom: '-10%',
-                transform: "translateX(-50%)",
-                color: "white",
-                textWrap: "nowrap"
-              }}>
-                KSM - 66
-              </div> */}
               <Lottie
                 lottieRef={spicesRef.current[4]}
                 style={{
@@ -725,6 +654,7 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
+              <div style={labelStyle}>KSM-66</div>
             </div>
 
             <div
@@ -737,20 +667,6 @@ const GeneratedComponent = () => {
                 fontSize: isSmallLayout ? "18px" : "25px",
               }}
             >
-              {/* <Spice
-                withBg={false}
-                width={isSmallLayout ? 80 : 150}
-                height={isSmallLayout ? 80 : 150}
-              />
-              <div style={{
-                position: "absolute",
-                left: '35%',
-                bottom: '-10%',
-                transform: "translateX(-50%)",
-                color: "white"
-              }}>
-                Goshura
-              </div> */}
               <Lottie
                 lottieRef={spicesRef.current[5]}
                 style={{
@@ -761,7 +677,7 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
-   
+              <div style={labelStyle}>Gokshura</div>
             </div>
 
             {/* <div

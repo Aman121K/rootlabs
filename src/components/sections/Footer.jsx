@@ -137,17 +137,17 @@ const GeneratedComponent = () => {
           <div
             key={index}
             id="_64_1142_Frame_1820554732"
-            // style={{
-            //   position: "relative",
-            //   height: "148.0px",
-            //   width: "154.0px",
-            //   display: "flex",
-            //   flexDirection: "column",
-            //   justifyContent: "flex-start",
-            //   alignItems: "flex-start",
-            //   flexWrap: "nowrap",
-            //   gap: "8px",
-            // }}
+            style={{
+              position: "relative",
+              height: "148.0px",
+              width: "154.0px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              alignItems: "flex-start",
+              flexWrap: "nowrap",
+              gap: "8px",
+            }}
           >
             <span
               id="SHOP"
