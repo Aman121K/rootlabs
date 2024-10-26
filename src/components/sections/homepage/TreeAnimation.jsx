@@ -761,6 +761,7 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
+   
             </div>
 
             {/* <div

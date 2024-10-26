@@ -161,7 +161,7 @@ const GeneratedComponent = () => {
         >
             <Lottie
               animationData={animationData}
-              loop={false}
+              // loop={false}
               autoplay={false}
               lottieRef={lottieRef}
             />

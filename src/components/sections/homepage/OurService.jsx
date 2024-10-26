@@ -32,7 +32,7 @@ const GeneratedComponent = () => {
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
-        gap: "115px",
+        // gap: "115px",
         flexWrap: "wrap",
         alignItems: "center",
         padding: "40px 132px ",
@@ -302,7 +302,7 @@ const GeneratedComponent = () => {
         style={{
           borderRadius: "26px",
           // height: "522px",
-          width: "1000px",
+          width: "700px",
           mixBlendMode: "darken",
         }}
       >

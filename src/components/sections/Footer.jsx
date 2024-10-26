@@ -173,7 +173,7 @@ const GeneratedComponent = () => {
                 position: "relative",
                 height: "120.0px",
                 width: "154.0px",
-                width: "100%",
+                // width: "100%",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "flex-start",
