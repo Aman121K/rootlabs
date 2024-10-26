@@ -173,7 +173,7 @@ const GeneratedComponent = () => {
                 position: "relative",
                 height: "120.0px",
                 width: "154.0px",
-                // width: "100%",
+                width: "100%",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "flex-start",
@@ -342,8 +342,15 @@ const GeneratedComponent = () => {
           >
             Terms &amp; Conditions
           </Link>
+         
           {/* Terms &amp; Conditions */}
         </span>
+        <Link
+            to="/contactForm" 
+            style={{ color: "#e8ddd3ff", textDecoration: "none" }} // Optional styles for the link
+          >
+            Contact Us
+          </Link>
       </div>
     </div>
   );

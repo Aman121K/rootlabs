@@ -106,6 +106,7 @@ const ContactSupport = () => {
             <div className="form-row">
               <select
                 name="state"
+                className="option-row"
                 value={formData.state}
                 onChange={handleChange}
               >
@@ -114,7 +115,7 @@ const ContactSupport = () => {
                 <option value="state2">State 2</option>
               </select>
 
-              <select name="city" value={formData.city} onChange={handleChange}>
+              <select   className="option-row" name="city" value={formData.city} onChange={handleChange}>
                 <option value="">Please Select Your City</option>
                 <option value="city1">City 1</option>
                 <option value="city2">City 2</option>

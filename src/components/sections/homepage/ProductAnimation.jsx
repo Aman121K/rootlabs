@@ -8,7 +8,7 @@ import animationData from "../../../../assets/roundGummies.json";
 
 const GeneratedComponent = () => {
   <style>
-        {`
+    {`
           @keyframes rotate {
             from {
               transform: rotate(0deg);
@@ -18,7 +18,7 @@ const GeneratedComponent = () => {
             }
           }
         `}
-      </style>
+  </style>
   const animation = "slideUp 0.7s ease-in forwards";
   const textRef = useIntersectionAnimation(animation, { threshold: 0.1 });
   const [animationProgress, setAnimationProgress] = useState(0);
@@ -117,7 +117,7 @@ const GeneratedComponent = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        height:"1100px"
+        height: "1100px"
       }}
     >
       <div
@@ -210,7 +210,7 @@ const GeneratedComponent = () => {
             position: "absolute",
             width: "70%",
             top: "27%",
-            left:"15%",
+            left: "15%",
             // bottom:"5%"
             // transform: "translateX(-50%)",
           }}
@@ -220,36 +220,36 @@ const GeneratedComponent = () => {
           autoplay={false} // Autoplay is false since we're controlling progress via scroll
         />
         <div style={{
-            animation: "rotate 2s linear infinite"
+          animation: "rotate 2s linear infinite"
         }} >
-        <Lottie
-          style={{
-            // left: "50%",
-            // transform: "translateX(-50%)",
-            position: "absolute",
-            width: "70%",
-            left:"15%",
-            // minWidth: "500px"
-          }}
-          id="firstLottie"
-          lottieRef={lottieRef1}
-          animationData={animationData}
-          loop={true}
-          autoplay={true} // Autoplay is false for scroll control
-        />
+          <Lottie
+            style={{
+              // left: "50%",
+              // transform: "translateX(-50%)",
+              position: "absolute",
+              width: "70%",
+              left: "15%",
+              // minWidth: "500px"
+            }}
+            id="firstLottie"
+            lottieRef={lottieRef1}
+            animationData={animationData}
+            loop={true}
+            autoplay={true} // Autoplay is false for scroll control
+          />
         </div>
-         <div style={{
-      width: '200px',
-      height: '400px',
-      transform: 'rotate(90deg) ',
-      position: 'absolute',
-      bottom:"-10%",
-      left:"40%",
-      filter:"blur(10px)",
-      background: 'radial-gradient(circle at -30% 50%, transparent 10%, #F2F0E8 51%)',
-      borderRadius: '50%',
-    }}>
-    </div>
+        <div style={{
+          width: '200px',
+          height: '400px',
+          transform: 'rotate(90deg) ',
+          position: 'absolute',
+          bottom: "-10%",
+          left: "40%",
+          filter: "blur(10px)",
+          background: 'radial-gradient(circle at -30% 50%, transparent 10%, #F2F0E8 51%)',
+          borderRadius: '50%',
+        }}>
+        </div>
       </div>
     </div>
   );
