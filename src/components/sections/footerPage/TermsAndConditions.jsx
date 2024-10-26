@@ -1,9 +1,14 @@
-import React from "react";
+import React,{useState} from "react";
 import "./TermsAndConditions.css";
 import GeneratedComponent from "../Footer";
 import GenerateComponent from "../Header";
 
 const TermsAndConditions = () => {
+  const [showMore, setShowMore] = useState(false);
+
+  const toggleShowMore = () => {
+    setShowMore((prev) => !prev);
+  };
   return (
     <div>
       <GenerateComponent />
@@ -56,9 +61,28 @@ const TermsAndConditions = () => {
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
-          <h1 className="heading-2">Elisibility</h1>
+          <p className={`terms-regular ${showMore ? "expanded" : "faded-text"}`}>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+          <h1 className={`heading-2 ${showMore ? "" : "hidden"}`}>Elisibility</h1>
 
-          <button className="button-label">Read More</button>
+          <button className="button-label" onClick={toggleShowMore}>
+            {showMore ? "Show Less" : "Read More"}
+          </button>
+
+          <p className={`terms-extra ${showMore ? "expanded" : "hidden"}`}>
+            In order to use the Websites, you must be 18 years or older and have
+            the power to enter into a binding contract with us and not be barred
+            from doing so under any applicable laws.
+          </p>
         </div>
       </div>
       <GeneratedComponent />

@@ -66,6 +66,46 @@ body {
   color: #13523b;
 }
 
+/* Faded text styling */
+.faded-text {
+  max-height: 8.6em; /* Roughly 2 lines of text */
+  opacity: 0.5;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Expanded state for full content */
+.expanded {
+  max-height: 1000px; /* Large enough to show all text */
+  opacity: 1; /* Full opacity */
+}
+
+/* Button Styling */
+.button-label {
+  display: block;
+  margin: 50px auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.heading-2 {
+  font-family: "ariel", sans-serif;
+  color: #13523b;
+  transition: opacity 0.4s ease;
+}
+
+/* Hidden by default for "Read More" toggle */
+.hidden {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .terms-container {
     padding: 10px;
