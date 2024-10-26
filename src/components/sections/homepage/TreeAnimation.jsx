@@ -558,8 +558,8 @@ const GeneratedComponent = () => {
               <Lottie
                 lottieRef={spicesRef.current[0]}
                 style={{
-                  width: isSmallLayout ? 150 : 300,
-                  height: isSmallLayout ? 150 : 300,
+                  width: isSmallLayout ? 150 : 350,
+                  height: isSmallLayout ? 150 : 350,
                 }}
                 animationData={animationData}
                 loop={false}
@@ -609,8 +609,8 @@ const GeneratedComponent = () => {
               <Lottie
                 lottieRef={spicesRef.current[1]}
                 style={{
-                  width: isSmallLayout ? 150 : 200,
-                  height: isSmallLayout ? 150 : 200,
+                  width: isSmallLayout ? 150 : 250,
+                  height: isSmallLayout ? 150 : 250,
                 }}
                 animationData={lottieVariants[0]}
                 loop={false}
@@ -645,8 +645,8 @@ const GeneratedComponent = () => {
               <Lottie
                 lottieRef={spicesRef.current[2]}
                 style={{
-                  width: isSmallLayout ? 150 : 200,
-                  height: isSmallLayout ? 150 : 200,
+                  width: isSmallLayout ? 150 : 250,
+                  height: isSmallLayout ? 150 : 250,
                 }}
                 animationData={lottieVariants[1]}
                 loop={false}
@@ -681,8 +681,8 @@ const GeneratedComponent = () => {
               <Lottie
                 lottieRef={spicesRef.current[3]}
                 style={{
-                  width: isSmallLayout ? 150 : 200,
-                  height: isSmallLayout ? 150 : 200,
+                  width: isSmallLayout ? 150 : 250,
+                  height: isSmallLayout ? 150 : 250,
                 }}
                 animationData={lottieVariants[2]}
                 loop={false}
@@ -718,8 +718,8 @@ const GeneratedComponent = () => {
               <Lottie
                 lottieRef={spicesRef.current[4]}
                 style={{
-                  width: isSmallLayout ? 150 : 200,
-                  height: isSmallLayout ? 150 : 200,
+                  width: isSmallLayout ? 150 : 250,
+                  height: isSmallLayout ? 150 : 250,
                 }}
                 animationData={lottieVariants[3]}
                 loop={false}
@@ -754,8 +754,8 @@ const GeneratedComponent = () => {
               <Lottie
                 lottieRef={spicesRef.current[5]}
                 style={{
-                  width: isSmallLayout ? 150 : 200,
-                  height: isSmallLayout ? 150 : 200,
+                  width: isSmallLayout ? 150 : 250,
+                  height: isSmallLayout ? 150 : 250,
                 }}
                 animationData={lottieVariants[4]}
                 loop={false}

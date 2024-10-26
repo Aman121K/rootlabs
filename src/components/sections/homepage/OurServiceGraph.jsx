@@ -150,22 +150,20 @@ const GeneratedComponent = () => {
           style={{
             display: "flex",
             position: "relative",
-            width: "90vw",
-            // height: "50vw",
-            // minHeight: "400px",
             justifySelf: "center",
-            alignItems: "center",
+            alignItems: "flex-start", // aligns Lottie animation to the top
             justifyContent: "center",
             padding: "5%",
           }}
         >
-            <Lottie
-              animationData={animationData}
-              // loop={false}
-              autoplay={false}
-              lottieRef={lottieRef}
-            />
+          <Lottie
+            animationData={animationData}
+            loop={false} // disables looping
+            autoplay={false} // disables autoplay
+            lottieRef={lottieRef}
+          />
         </div>
+
       </div>
     </div>
   );
