@@ -86,8 +86,8 @@ function ExpandableBenefits({ imageSrc, title, children }) {
       >
         <div
           style={{
-            padding: isExpanded ? "8px" : "0px", // Add padding only when expanded
-            opacity: isExpanded ? 1 : 0, // Smooth appearance of text
+            padding: isExpanded ? "8px" : "0px",
+            opacity: isExpanded ? 1 : 0, 
             transition: "opacity 0.3s ease-in-out, padding 0.3s ease-in-out", // Smooth transition for padding and opacity
           }}
         >

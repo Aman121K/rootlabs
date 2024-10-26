@@ -295,7 +295,7 @@ function Ingredients() {
         style={{
           position: "relative",
           height: "48px",
-          width: "200px",
+          width: "225px",
           alignSelf: "center",
         }}
       >
