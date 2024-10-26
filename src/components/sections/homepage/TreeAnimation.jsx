@@ -562,7 +562,7 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
-              <div style={labelStyle}>Inulin</div>
+              {/* <div style={labelStyle}>Inulin</div> */}
             </div>
 
             <div
@@ -585,7 +585,7 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
-              <div style={labelStyle}>Shilajit</div>
+              {/* <div style={labelStyle}>Shilajit</div> */}
             </div>
 
             <div
@@ -608,7 +608,7 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
-              <div style={labelStyle}>Gokshura</div>
+              {/* <div style={labelStyle}>Gokshura</div> */}
             </div>
 
             <div
@@ -631,7 +631,7 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
-              <div style={labelStyle}>Gokshura</div>
+              {/* <div style={labelStyle}>Gokshura</div> */}
             </div>
 
             <div
@@ -654,7 +654,7 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
-              <div style={labelStyle}>KSM-66</div>
+              {/* <div style={labelStyle}>KSM-66</div> */}
             </div>
 
             <div
@@ -677,7 +677,7 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
-              <div style={labelStyle}>Gokshura</div>
+              {/* <div style={labelStyle}>Gokshura</div> */}
             </div>
 
             {/* <div
