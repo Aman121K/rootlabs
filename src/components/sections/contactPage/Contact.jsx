@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Headphones, MessageSquare, Phone, MapPin } from "lucide-react";
 import "./Contact.css";
 import GenerateComponent from "../Header";
@@ -16,9 +16,17 @@ const ContactSupport = () => {
     acknowledged: false,
   });
 
+  const mainContentRef = useRef(null); // Create a ref for the main content
+
   const [toastMessage, setToastMessage] = useState("");
   const [showToast, setShowToast] = useState(false);
 
+  useEffect(() => {
+    // Scroll to the main content when the component mounts
+    if (mainContentRef.current) {
+      mainContentRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, []);
 
   const handleSubmit = (e) => {
     setToastMessage("Form submitted successfully!");
@@ -40,7 +48,6 @@ const ContactSupport = () => {
     setShowToast(false);
   };
 
-
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
@@ -52,8 +59,7 @@ const ContactSupport = () => {
   return (
     <div>
       <GenerateComponent />
-      <div style={{ marginTop: 100 }} className="contact-container">
-
+      <div ref={mainContentRef} style={{ marginTop: 100 }} className="contact-container">
         <div className="contact-header">
           <div className="icon-circle">
             <Headphones className="icon" />
@@ -122,7 +128,6 @@ const ContactSupport = () => {
                 />
                 <input
                   type="email"
-                  // style={{marginLeft:10}}
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
@@ -130,33 +135,39 @@ const ContactSupport = () => {
                 />
               </div>
 
-            <div className="form-row">
-              <select
-                name="state"
-                className="option-row"
-                value={formData.state}
-                onChange={handleChange}
-              >
-                <option value="">Please Select Your State</option>
-                <option value="state1">State 1</option>
-                <option value="state2">State 2</option>
-              </select>
+              <div className="form-row">
+                <select
+                  name="state"
+                  className="option-row"
+                  value={formData.state}
+                  onChange={handleChange}
+                >
+                  <option value="">Please Select Your State</option>
+                  <option value="state1">State 1</option>
+                  <option value="state2">State 2</option>
+                </select>
 
-              <select   className="option-row" name="city" value={formData.city} onChange={handleChange}>
-                <option value="">Please Select Your City</option>
-                <option value="city1">City 1</option>
-                <option value="city2">City 2</option>
-              </select>
-            </div>
-            <div className="box">
-              <textarea
-                name="reason"
-                value={formData.reason}
-                onChange={handleChange}
-                placeholder="Reason for Contact..."
-                rows={4}
-              />
-            </div>
+                <select
+                  className="option-row"
+                  name="city"
+                  value={formData.city}
+                  onChange={handleChange}
+                >
+                  <option value="">Please Select Your City</option>
+                  <option value="city1">City 1</option>
+                  <option value="city2">City 2</option>
+                </select>
+              </div>
+
+              <div className="box">
+                <textarea
+                  name="reason"
+                  value={formData.reason}
+                  onChange={handleChange}
+                  placeholder="Reason for Contact..."
+                  rows={4}
+                />
+              </div>
 
               <div className="checkbox-group">
                 <input
@@ -180,7 +191,7 @@ const ContactSupport = () => {
           </div>
         </div>
       </div>
-      <GeneratedComponent/>
+      <GeneratedComponent />
       {showToast && <Toast message={toastMessage} onClose={handleCloseToast} />}
     </div>
   );

@@ -197,6 +197,7 @@ const GeneratedComponent = () => {
       <div
         ref={animationContainerRef}
         style={{
+          textAlign:"center",
           position: "relative",
           width: "200%",
           maxWidth: "1000px",
@@ -208,9 +209,9 @@ const GeneratedComponent = () => {
           id="product_animation_lottie"
           style={{
             position: "absolute",
-            width: "70%",
+            width: "85%",
             top: "27%",
-            left: "15%",
+            left: "5%",
             // bottom:"5%"
             // transform: "translateX(-50%)",
           }}
@@ -219,16 +220,13 @@ const GeneratedComponent = () => {
           loop={false}
           autoplay={false} // Autoplay is false since we're controlling progress via scroll
         />
-        <div style={{
-          animation: "rotate 2s linear infinite"
-        }} >
           <Lottie
             style={{
               // left: "50%",
               // transform: "translateX(-50%)",
               position: "absolute",
-              width: "70%",
-              left: "15%",
+              width: "85%",
+              left: "5%",
               // minWidth: "500px"
             }}
             id="firstLottie"
@@ -251,7 +249,6 @@ const GeneratedComponent = () => {
         }}>
         </div>
       </div>
-    </div>
   );
 };
 

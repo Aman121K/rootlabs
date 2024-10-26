@@ -295,62 +295,47 @@ const GeneratedComponent = () => {
           bottom: "0px",
           left: "0px",
           display: "flex",
-          width: "calc(100% - 40px - 40px)",
-          flexDirection: "row",
+          width: "calc(100% - 80px)", // Adjusted to simplify width calculation
           justifyContent: "space-between",
           alignItems: "center",
-          flexWrap: "nowrap",
           background: "rgba(47, 102, 81, 1.00)",
-          filter: "drop-shadow(2.0px 4.0px 64.0px 0.0px rgba(0, 0, 0, 0.12))",
+          filter: "drop-shadow(2px 4px 64px rgba(0, 0, 0, 0.12))",
           padding: "16px 40px",
         }}
       >
         <span
           id="__2024_RootLabs__All_rights_reserved"
           style={{
-            color: "#e8ddd3ff",
+            color: "#e8ddd3",
             fontFamily: "Matter-TRIAL",
-            fontSize: "14.0px",
+            fontSize: "14px",
             fontWeight: "430",
             lineHeight: "18px",
             textAlign: "center",
-            height: "18.0px",
-            width: "228.0px",
-            position: "relative",
-            opacity: "0.699999988079071",
+            opacity: "0.7",
           }}
         >
-          © 2024 RootLabs. All rights reserved
+          ©️ 2024 RootLabs. All rights reserved
         </span>
+
         <span
-          id="Terms___Conditions"
           style={{
-            color: "#e8ddd3ff",
+            color: "#e8ddd3",
             fontFamily: "Matter-TRIAL",
-            fontSize: "14.0px",
+            fontSize: "14px",
             fontWeight: "430",
             lineHeight: "18px",
             textAlign: "center",
-            height: "18.0px",
-            width: "122.0px",
-            position: "relative",
           }}
         >
-          <Link
-            to="/terms-and-conditions" 
-            style={{ color: "#e8ddd3ff", textDecoration: "none" }} // Optional styles for the link
-          >
-            Terms &amp; Conditions
-          </Link>
-         
-          {/* Terms &amp; Conditions */}
-        </span>
-        <Link
-            to="/contactForm" 
-            style={{ color: "#e8ddd3ff", textDecoration: "none" }} // Optional styles for the link
-          >
+          <Link to="/terms-and-conditions" style={{ color: "#e8ddd3", textDecoration: "none" }}>
+            Terms & Conditions
+          </Link>{" "}
+          |{" "}
+          <Link to="/contactForm" style={{ color: "#e8ddd3", textDecoration: "none" }}>
             Contact Us
           </Link>
+        </span>
       </div>
     </div>
   );

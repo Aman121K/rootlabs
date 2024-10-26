@@ -9,7 +9,7 @@ import ScrollMove from "../../../animation/ScrollImage";
 import MonthCard from "./MonthCard";
 function HowItWorks() {
   const animation = "slideUp 0.7s ease-in forwards";
-  const textRef = useIntersectionAnimation(animation, { threshold: 0.1 });
+  // const textRef = useIntersectionAnimation(animation, { threshold: 0.1 });
   const parentRef = useRef(null);
   const [isHovered, setIsHovered] = useState(null);
   const [isInView, setIsInView] = useState(false);
@@ -66,27 +66,27 @@ function HowItWorks() {
     return () => clearInterval(intervalId);
   }, [monthsData.length, isInView]);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setIsInView(entry.isIntersecting); // Set isInView based on intersection status
-        });
-      },
-      { threshold: 0.1 }
-    );
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         setIsInView(entry.isIntersecting); // Set isInView based on intersection status
+  //       });
+  //     },
+  //     { threshold: 0.1 }
+  //   );
 
-    const target = parentRef.current;
-    if (target) {
-      observer.observe(target);
-    }
+  //   const target = parentRef.current;
+  //   if (target) {
+  //     observer.observe(target);
+  //   }
 
-    return () => {
-      if (target) {
-        observer.unobserve(target);
-      }
-    };
-  }, [parentRef]);
+  //   return () => {
+  //     if (target) {
+  //       observer.unobserve(target);
+  //     }
+  //   };
+  // }, [parentRef]);
 
   return (
     <div
@@ -171,7 +171,7 @@ function HowItWorks() {
             }}
           >
             <span
-              ref={textRef}
+              // ref={textRef}
               className="TEXT_HEADING_STYLE text-center"
               id="Your_Journey_to_Holistic_Health"
               style={{

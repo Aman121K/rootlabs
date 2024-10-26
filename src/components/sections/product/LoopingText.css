@@ -1,0 +1,15 @@
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.scrolling-content {
+    animation: scroll 20s linear infinite;
+    display: inline-flex;
+    /* Duplicate the text to ensure seamless looping */
+    width: 200%; /* Adjust as needed for a longer loop */
+}
