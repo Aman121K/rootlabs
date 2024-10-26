@@ -41,10 +41,12 @@ body {
 }
 
 .terms-regular {
-  font-size: 16px;
-  font-weight: 430;
-  line-height: 32px;
-  /* font-family: "Matter-TRIAL", sans-serif;  */
+  display: -webkit-box; /* For Safari */
+  display: block;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: 4.5em; /* Adjust according to your line height for 3 lines (assuming 1.5em per line) */
+  transition: opacity 0.3s ease; /* Transition for smooth effect */
 }
 
 .button-label {
@@ -64,22 +66,19 @@ body {
 .heading-2 {
   font-family: "ariel", sans-serif;
   color: #13523b;
+  font-size: 45px;
+  font-weight: 400;
 }
 
-/* Faded text styling */
 .faded-text {
-  max-height: 8.6em; /* Roughly 2 lines of text */
-  opacity: 0.5;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  opacity: 0.5; /* Makes the text faded */
+}
+.expanded {
+  display: block; /* Ensure that the full text is displayed when expanded */
+  opacity: 1; /* Full opacity for expanded text */
+  max-height: none; /* Allow full height */
 }
 
-/* Expanded state for full content */
-.expanded {
-  max-height: 1000px; /* Large enough to show all text */
-  opacity: 1; /* Full opacity */
-}
 
 /* Button Styling */
 .button-label {
@@ -101,11 +100,9 @@ body {
   transition: opacity 0.4s ease;
 }
 
-/* Hidden by default for "Read More" toggle */
 .hidden {
-  display: none;
+  display: none; /* Hide extra text by default */
 }
-
 @media (max-width: 768px) {
   .terms-container {
     padding: 10px;

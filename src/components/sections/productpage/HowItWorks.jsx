@@ -229,7 +229,7 @@ function HowItWorks() {
                   <MonthCard
                     key={index}
                     isHovered={isHovered}
-                    setIsHovered={setIsHovered}
+                    // setIsHovered={setIsHovered}
                     item={item}
                     index={index}
                     isInView={isInView}

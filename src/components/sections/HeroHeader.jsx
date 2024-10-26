@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useRef, useState } from "react";
 import Header from "./Header.jsx";
-import video from '../../../assets/RootLabVideo.mp4'
-import desktopVideo from '../../../assets/HeroHeaderDesktopClipped.mp4'
+import video from "../../../assets/RootLabVideo.mp4";
+import desktopVideo from "../../../assets/HeroHeaderDesktopClipped.mp4";
 import ButtonComponent from "../common/ArrowButton.jsx";
-import hh1 from '../../../assets/hh1.jpeg'
-import hh2 from '../../../assets/hh2.jpeg'
-import hh3 from '../../../assets/hh3.jpeg'
-import hh4 from '../../../assets/hh4.jpeg'
-import hh_star from '../../../assets/hh_star.svg'
+import hh1 from "../../../assets/hh1.jpeg";
+import hh2 from "../../../assets/hh2.jpeg";
+import hh3 from "../../../assets/hh3.jpeg";
+import hh4 from "../../../assets/hh4.jpeg";
+import hh_star from "../../../assets/hh_star.svg";
 
 const GeneratedComponent = () => {
   const navigate = useNavigate();
@@ -29,22 +29,20 @@ const GeneratedComponent = () => {
         const videoWidth = videoElement.offsetWidth;
         let newHeight = videoWidth / videoRatio;
 
-        if(newHeight > 1150){
+        if (newHeight > 1150) {
           newHeight += 100;
-        } else if(newHeight > 1225){
+        } else if (newHeight > 1225) {
           newHeight += 5000;
-        }
-        else if(newHeight > 1650){
+        } else if (newHeight > 1650) {
           newHeight += 400;
-        }
-        else if(newHeight > 1850){
+        } else if (newHeight > 1850) {
           newHeight += 8000;
         }
         setVideoHeight(newHeight); // Calculate and set the height dynamically
 
         // Adjust the top offset proportionally (e.g., 1% of the video height)
-        const calculatedTopOffset = -(newHeight * 0.1); 
-        if(newHeight > 1150){
+        const calculatedTopOffset = -(newHeight * 0.1);
+        if (newHeight > 1150) {
           setTopOffset(calculatedTopOffset);
         } else {
           setTopOffset(-12);
@@ -54,11 +52,11 @@ const GeneratedComponent = () => {
 
     // Set initial video height when component mounts and video metadata is loaded
     if (videoElement) {
-      videoElement.addEventListener('loadedmetadata', updateVideoHeight);
+      videoElement.addEventListener("loadedmetadata", updateVideoHeight);
     }
 
     // Update video height on window resize
-    window.addEventListener('resize', updateVideoHeight);
+    window.addEventListener("resize", updateVideoHeight);
 
     // Slow down the video
     if (videoElement) {
@@ -77,9 +75,9 @@ const GeneratedComponent = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
       if (videoElement) {
-        videoElement.removeEventListener('loadedmetadata', updateVideoHeight);
+        videoElement.removeEventListener("loadedmetadata", updateVideoHeight);
       }
-      window.removeEventListener('resize', updateVideoHeight);
+      window.removeEventListener("resize", updateVideoHeight);
     };
   }, []);
 
@@ -107,7 +105,7 @@ const GeneratedComponent = () => {
           // height: "1081.0px",
           width: "100%",
           minHeight: "1070px",
-          height: videoHeight
+          height: videoHeight,
         }}
       >
         <div
@@ -121,13 +119,13 @@ const GeneratedComponent = () => {
             justifyContent: "center",
             left: "37px",
             top: `${topOffset}px`,
-            overflow: "hidden",  // Make sure nothing overflows
+            overflow: "hidden", // Make sure nothing overflows
           }}
         >
           <video
             id="hero_video"
             ref={videoRef}
-            src={isMobileLayout? video : desktopVideo}
+            src={isMobileLayout ? video : desktopVideo}
             style={{
               width: "100%",
               height: "100%",
@@ -179,22 +177,33 @@ const GeneratedComponent = () => {
               position: "relative",
             }}
           >
-            Handpicked in <span
+            Handpicked in{" "}
+            <span
               style={{
                 fontFamily: "Reckless TRIAL",
                 // fontWeight: "lighter",
                 color: "#13523B",
                 fontWeight: "500",
-                fontStyle: "italic"
-              }}> nature.</span> <br />
-            Perfected in <span
+                fontStyle: "italic",
+              }}
+            >
+              {" "}
+              nature.
+            </span>{" "}
+            <br />
+            Perfected in{" "}
+            <span
               style={{
                 fontFamily: "Reckless TRIAL",
                 // fontWeight: "lighter",
                 color: "#13523B",
                 fontStyle: "italic",
                 fontWeight: "500",
-              }}> science.</span>
+              }}
+            >
+              {" "}
+              science.
+            </span>
           </span>
 
           <div
@@ -258,8 +267,7 @@ const GeneratedComponent = () => {
                     style={{
                       position: "relative",
                       overflow: "hidden",
-                      background:
-                        `url(${hh1}) 100% / cover no-repeat`,
+                      background: `url(${hh1}) 100% / cover no-repeat`,
                       borderColor: "#ffffffff",
                       borderStyle: "solid",
                       borderWidth: "1px",
@@ -279,8 +287,7 @@ const GeneratedComponent = () => {
                     style={{
                       position: "relative",
                       overflow: "hidden",
-                      background:
-                        `url(${hh2}) 100% / cover no-repeat`,
+                      background: `url(${hh2}) 100% / cover no-repeat`,
                       borderColor: "#ffffffff",
                       borderStyle: "solid",
                       borderWidth: "1px",
@@ -300,8 +307,7 @@ const GeneratedComponent = () => {
                     style={{
                       position: "relative",
                       overflow: "hidden",
-                      background:
-                        `url(${hh3}) 100% / cover no-repeat`,
+                      background: `url(${hh3}) 100% / cover no-repeat`,
                       borderColor: "#ffffffff",
                       borderStyle: "solid",
                       borderWidth: "1px",
@@ -321,8 +327,7 @@ const GeneratedComponent = () => {
                     style={{
                       position: "relative",
                       overflow: "hidden",
-                      background:
-                        `url(${hh4}) 100% / cover no-repeat`,
+                      background: `url(${hh4}) 100% / cover no-repeat`,
                       borderColor: "#ffffffff",
                       borderStyle: "solid",
                       borderWidth: "1.5px",
@@ -398,7 +403,7 @@ const GeneratedComponent = () => {
                   height: "19.0px",
                   width: "178.0px",
                   position: "relative",
-                  whiteSpace: "nowrap"
+                  whiteSpace: "nowrap",
                 }}
               >
                 Loved by 9,875 Customers
@@ -412,4 +417,4 @@ const GeneratedComponent = () => {
     </div>
   );
 };
-export default GeneratedComponent
+export default GeneratedComponent;
