@@ -23,7 +23,9 @@ const useQuery = () => {
 function ProductPage() {
   const query = useQuery();
   const productHandle = query.get("productHandle");
-  const [isMobileLayout, setIsMobileLayout] = useState(window.innerWidth <= 768);
+  const [isMobileLayout, setIsMobileLayout] = useState(
+    window.innerWidth <= 768
+  );
   const [quantity, setQuantity] = useState(1);
   const [product, setProduct] = useState([]);
 
@@ -47,7 +49,11 @@ function ProductPage() {
 
     const fetchProduct = async () => {
       try {
-        const product = await StoreFront.fetchProductByHandle(productHandle, 5, true);
+        const product = await StoreFront.fetchProductByHandle(
+          productHandle,
+          5,
+          true
+        );
         if (product) {
           setProduct(product);
         }
@@ -58,7 +64,9 @@ function ProductPage() {
 
     const initializeQuantity = (productHandle) => {
       const existingCart = JSON.parse(localStorage.getItem("cartItems")) || [];
-      const existingItem = existingCart.find((item) => item.productHandle === productHandle);
+      const existingItem = existingCart.find(
+        (item) => item.productHandle === productHandle
+      );
       if (existingItem) {
         setQuantity(existingItem.quantity);
       }
@@ -106,10 +114,13 @@ function ProductPage() {
             overflowY: "auto",
             maxHeight: "80vh",
             paddingRight: "20px",
-            scrollbarWidth: "none", // for Firefox
+            scrollbarWidth: "none",
           }}
         >
-          <ProductImages images={product?.images?.edges} isMobileLayout={isMobileLayout} />
+          <ProductImages
+            images={product?.images?.edges}
+            isMobileLayout={isMobileLayout}
+          />
         </div>
 
         <div
@@ -122,7 +133,11 @@ function ProductPage() {
             gap: 30,
           }}
         >
-          <ProductDetails product={product} quantity={quantity} setQuantity={setQuantity} />
+          <ProductDetails
+            product={product}
+            quantity={quantity}
+            setQuantity={setQuantity}
+          />
         </div>
       </div>
 
@@ -130,7 +145,14 @@ function ProductPage() {
       <Technology />
       <HowItWorks />
       <Ingredients />
-      <div style={{ display: "flex", flexDirection: "column", gap: 0, padding: "0px 16px 80px 16px" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: 0,
+          padding: "0px 16px 80px 16px",
+        }}
+      >
         <CustomerTestimonial />
         <div
           id="_64_1103_Button_default2"
@@ -141,7 +163,10 @@ function ProductPage() {
             alignSelf: "center",
           }}
         >
-          <ArrowButton label="Read More" onClick={() => window.scrollTo(0, 0)} />
+          <ArrowButton
+            label="Read More"
+            onClick={() => window.scrollTo(0, 0)}
+          />
         </div>
       </div>
       <DoctorsSay />
@@ -154,5 +179,3 @@ function ProductPage() {
 }
 
 export default ProductPage;
-
-
