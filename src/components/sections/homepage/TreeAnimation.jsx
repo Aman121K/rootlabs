@@ -665,7 +665,7 @@ const GeneratedComponent = () => {
                 id="spice1Text3"
                 style={{
                   ...labelStyle,
-                  top: "90%",
+                  top: "85%",
                   left: isSmallLayout ? "10%" : "50%",
                   transform: isSmallLayout
                     ? "translateX(0%)"
@@ -702,8 +702,8 @@ const GeneratedComponent = () => {
                 ref={spicesLabelRef.current[3]}
                 style={{
                   ...labelStyle,
-                  top: "90%",
-                  left: "20%",
+                  top: "85%",
+                  left: "30%",
                   transform: "translateX(-50%)",
                   width: "max-content",
                 }}
@@ -737,7 +737,7 @@ const GeneratedComponent = () => {
                 id="spice1Text5"
                 style={{
                   ...labelStyle,
-                  top: "90%",
+                  top: "85%",
                   left: "50%",
                   transform: "translateX(-50%)",
                   width: "max-content",
@@ -772,7 +772,7 @@ const GeneratedComponent = () => {
                 id="spice1Text6"
                 style={{
                   ...labelStyle,
-                  top: "90%",
+                  top: "85%",
                   left: isSmallLayout ? "-10%" : "10%",
                 }}
               >
