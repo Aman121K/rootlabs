@@ -607,8 +607,8 @@ const GeneratedComponent = () => {
             <div
               style={{
                 position: "absolute",
-                left: isSmallLayout ? "2%" : "12%",
-                top: isSmallLayout ? "270px" : "450px",
+                left: isSmallLayout ? "2%" : "13%",
+                top: isSmallLayout ? "270px" : "466px",
                 transform: "translateX(-50%)",
                 zIndex: 80,
                 fontSize: isSmallLayout ? "18px" : "25px",
@@ -643,7 +643,7 @@ const GeneratedComponent = () => {
               style={{
                 position: "absolute",
                 left: isSmallLayout ? "40%" : "38%",
-                top: isSmallLayout ? "170px" : "300px",
+                top: isSmallLayout ? "170px" : "320px",
                 transform: "translateX(-50%)",
                 zIndex: 80,
                 fontSize: isSmallLayout ? "18px" : "25px",
@@ -680,8 +680,8 @@ const GeneratedComponent = () => {
             <div
               style={{
                 position: "absolute",
-                left: isSmallLayout ? "40%" : "42%",
-                top: isSmallLayout ? "460px" : "820px",
+                left: isSmallLayout ? "34%" : "39%",
+                top: isSmallLayout ? "385px" : "685px",
                 transform: "translateX(-50%)",
                 zIndex: 80,
                 fontSize: isSmallLayout ? "18px" : "25px",
@@ -715,8 +715,8 @@ const GeneratedComponent = () => {
             <div
               style={{
                 position: "absolute",
-                left: isSmallLayout ? "77%" : "67%",
-                top: isSmallLayout ? "330px" : "580px",
+                left: isSmallLayout ? "77%" : "65%",
+                top: isSmallLayout ? "330px" : "596px",
                 transform: "translateX(-50%)",
                 zIndex: 80,
                 fontSize: isSmallLayout ? "18px" : "25px",
@@ -750,8 +750,8 @@ const GeneratedComponent = () => {
             <div
               style={{
                 position: "absolute",
-                left: isSmallLayout ? "87%" : "93%",
-                top: isSmallLayout ? "190px" : "590px",
+                left: isSmallLayout ? "87%" : "88%",
+                top: isSmallLayout ? "190px" : "589px",
                 transform: "translateX(-50%)",
                 zIndex: 80,
                 fontSize: isSmallLayout ? "18px" : "25px",
