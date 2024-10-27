@@ -4,6 +4,9 @@ import "./Contact.css";
 import GenerateComponent from "../Header";
 import GeneratedComponent from "../Footer";
 import Toast from "../../toast/Toast";
+import ChatIcon from '../../../../assets/chats.svg'
+import PhoneIcon from '../../../../assets/call.svg'
+import LocationIcon from '../../../../assets/location.svg'
 
 const ContactSupport = () => {
   const [formData, setFormData] = useState({
@@ -75,7 +78,7 @@ const ContactSupport = () => {
 
             <div className="contact-methods">
               <div className="contact-method">
-                <img src="/assets/chats.svg" className="method-icon"/>
+                <img src={ChatIcon} className="method-icon"/>
                 {/* <MessageSquare className="method-icon" /> */}
                 <div className="method-details">
                   <h4>Chat to us</h4>
@@ -85,7 +88,7 @@ const ContactSupport = () => {
               </div>
 
               <div className="contact-method">
-              <img src="/assets/call.svg" className="method-icon"/>
+              <img src={PhoneIcon} className="method-icon"/>
              
                 <div className="method-details">
                   <h4>Phone</h4>
@@ -95,7 +98,7 @@ const ContactSupport = () => {
               </div>
 
               <div className="contact-method">
-              <img src="/assets/location.svg" className="method-icon"/>
+              <img src={LocationIcon} className="method-icon"/>
                 <div className="method-details">
                   <h4>Office</h4>
                   <p>Come say hello at our office HQ.</p>

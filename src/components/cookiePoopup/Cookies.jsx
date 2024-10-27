@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Cookies.css";
+import closeIcon from '../../../assets/cross-banner.svg'
 
 const Cookies = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -45,7 +46,7 @@ const Cookies = () => {
             <a href="/terms-and-conditions">Privacy Policy</a>
           </p>
           <button onClick={() => setShowBanner(false)}>
-           <img className="close-banner" src="/assets/cross-banner.svg" />
+           <img className="close-banner" src={closeIcon} />
           </button>
         </div>
       )}
