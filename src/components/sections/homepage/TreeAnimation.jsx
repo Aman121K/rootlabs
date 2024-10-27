@@ -711,9 +711,6 @@ const GeneratedComponent = () => {
               }}
             >
               <Lottie
-                onComplete={(ele) => {
-                  console.log(ele);
-                }}
                 lottieRef={spicesRef.current[5]}
                 style={{
                   width: isSmallLayout ? 150 : 250,
@@ -723,6 +720,7 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
+              {console.log(spicesRef.current[5])}
               <div
                 style={{
                   ...labelStyle,
