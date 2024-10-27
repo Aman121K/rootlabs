@@ -1,6 +1,7 @@
 # react
 
 ## Folder Structure
+
 ```md
 root/
 │
