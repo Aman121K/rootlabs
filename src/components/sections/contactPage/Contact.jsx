@@ -147,8 +147,11 @@ const ContactSupport = () => {
                   className="option-row"
                   value={formData.state}
                   onChange={handleChange}
+                  style={{
+                    color: formData.state ? "black" : "#919DA8",
+                  }}
                 >
-                  <option value="">Please Select Your State</option>
+                  <option disabled className="select-placeholder" value="">Please Select Your State</option>
                   <option value="state1">State 1</option>
                   <option value="state2">State 2</option>
                 </select>
@@ -158,8 +161,11 @@ const ContactSupport = () => {
                   name="city"
                   value={formData.city}
                   onChange={handleChange}
+                  style={{
+                    color: formData.state ? "black" : "#919DA8",
+                  }}
                 >
-                  <option value="">Please Select Your City</option>
+                  <option disabled className="select-placeholder" value="">Please Select Your City</option>
                   <option value="city1">City 1</option>
                   <option value="city2">City 2</option>
                 </select>
@@ -172,6 +178,7 @@ const ContactSupport = () => {
                   onChange={handleChange}
                   placeholder="Reason for Contact..."
                   rows={4}
+                  cols={6}
                 />
               </div>
 

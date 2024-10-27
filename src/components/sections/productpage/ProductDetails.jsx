@@ -60,7 +60,10 @@ function ProductDetails({ product, quantity, setQuantity }) {
         >
           <div
             style={{
-              fontSize: 40,
+              fontSize: "56px",
+              fontFamily: "Reckless TRIAL",
+              fontWeight:380,
+
             }}
           >
             {product.title}

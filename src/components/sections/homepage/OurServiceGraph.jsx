@@ -11,33 +11,33 @@ const GeneratedComponent = () => {
   const lottieRef = useRef();
   const [isAnimating, setIsAnimating] = useState(false); // State to control animation
 
-  useEffect(() => {
-    const options = {
-      root: null, // Relative to viewport
-      rootMargin: "0px",
-      threshold: 0.5, // Trigger when 50% of the footer is visible
-    };
+  // useEffect(() => {
+  //   const options = {
+  //     root: null, // Relative to viewport
+  //     rootMargin: "0px",
+  //     threshold: 0.5, // Trigger when 50% of the footer is visible
+  //   };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !isAnimating) {
-          setIsAnimating(true); // Start animation when footer is visible
-          // lottieRef.current.goToAndStop(10, true);
-          lottieRef.current.play();
-        }
-      });
-    }, options);
+  //   const observer = new IntersectionObserver((entries) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting && !isAnimating) {
+  //         setIsAnimating(true); // Start animation when footer is visible
+  //         // lottieRef.current.goToAndStop(10, true);
+  //         lottieRef.current.play();
+  //       }
+  //     });
+  //   }, options);
 
-    if (socialRef.current) {
-      observer.observe(socialRef.current);
-    }
+  //   if (socialRef.current) {
+  //     observer.observe(socialRef.current);
+  //   }
 
-    return () => {
-      if (socialRef.current) {
-        observer.unobserve(socialRef.current);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (socialRef.current) {
+  //       observer.unobserve(socialRef.current);
+  //     }
+  //   };
+  // }, []);
 
   return (
     <div
@@ -156,12 +156,7 @@ const GeneratedComponent = () => {
             padding: "5%",
           }}
         >
-          <Lottie
-            animationData={animationData}
-            loop={false} // disables looping
-            autoplay={false} // disables autoplay
-            lottieRef={lottieRef}
-          />
+         <img src="/assets/graph-home.svg" />
         </div>
 
       </div>

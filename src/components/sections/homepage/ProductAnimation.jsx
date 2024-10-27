@@ -211,7 +211,7 @@ const GeneratedComponent = () => {
             position: "absolute",
             width: "100%",
             top: "25%",
-            left: "5%",
+            // left: "1%",
             // bottom:"5%"
             // transform: "translateX(-50%)",
           }}
@@ -226,7 +226,7 @@ const GeneratedComponent = () => {
               // transform: "translateX(-50%)",
               position: "absolute",
               width: "70%",
-              left: "20%",
+              left: "15%",
               // minWidth: "500px"
             }}
             id="firstLottie"

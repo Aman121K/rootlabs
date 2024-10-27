@@ -20,6 +20,7 @@ body {
   font-size: 48px;
   color: #13523b;
   margin-bottom: 10px;
+  font-family: "Reckless TRIAL", sans-serif;
 }
 
 .terms-updated {
@@ -30,6 +31,9 @@ body {
 
 .terms-section {
   margin-bottom: 40px;
+}
+.terms-section h2{
+  font-family: 'Arial';
 }
 
 .terms-bold {

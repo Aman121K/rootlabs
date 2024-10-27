@@ -11,47 +11,7 @@ function Ingredients() {
   const [isMobileLayout, setIsMobileLayout] = useState(
     window.innerWidth <= 1024
   );
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
   const scrollContainerRef = useRef(null);
-
-  useEffect(() => {
-    // Update layout based on window width
-    const handleResize = () => {
-      if (window.innerWidth <= 1024) {
-        setIsMobileLayout(true);
-      } else {
-        setIsMobileLayout(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // Check scroll position to enable/disable arrows
-  const handleScrollCheck = () => {
-    const scrollContainer = scrollContainerRef.current;
-    if (scrollContainer) {
-      setCanScrollLeft(scrollContainer.scrollLeft > 0);
-      setCanScrollRight(
-        scrollContainer.scrollWidth - scrollContainer.scrollLeft >
-          scrollContainer.clientWidth
-      );
-    }
-  };
-
-  // Scroll left or right
-  const scroll = (direction) => {
-    const scrollContainer = scrollContainerRef.current;
-    if (scrollContainer) {
-      const scrollAmount = 250; // Adjust scroll amount as needed
-      scrollContainer.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
 
   const list = [
     {
@@ -78,8 +38,41 @@ function Ingredients() {
       description:
         "Improves stamina, enhances vitality, and supports reproductive health by promoting hormonal balance and physical endurance",
     },
-    // Add more ingredients if necessary
   ];
+
+  // Duplicating the list for seamless infinite scrolling
+  const extendedList = [...list, ...list, ...list];
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileLayout(window.innerWidth <= 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleScroll = () => {
+    const scrollContainer = scrollContainerRef.current;
+    const scrollWidth = scrollContainer.scrollWidth / 3;
+
+    // No explicit jump back to the start; let the duplication handle it visually
+    if (scrollContainer.scrollLeft >= 2 * scrollWidth) {
+      scrollContainer.scrollLeft = scrollWidth;
+    } else if (scrollContainer.scrollLeft <= 0) {
+      scrollContainer.scrollLeft = scrollWidth;
+    }
+  };
+
+  const scroll = (direction) => {
+    const scrollContainer = scrollContainerRef.current;
+    const scrollAmount = 250;
+
+    scrollContainer.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div
@@ -108,14 +101,14 @@ function Ingredients() {
               display: "flex",
               fontSize: "50px",
               border: "1px solid #13523B",
-              color: canScrollLeft ? "#13523B" : "#ccc",
+              color: "#13523B",
               borderRadius: 30,
               padding: "0px 20px",
               margin: "auto 0px",
               height: "fit-content",
-              cursor: canScrollLeft ? "pointer" : "not-allowed",
+              cursor: "pointer",
             }}
-            onClick={() => canScrollLeft && scroll("left")}
+            onClick={() => scroll("left")}
           >
             <IoIosArrowRoundBack />
           </div>
@@ -123,22 +116,21 @@ function Ingredients() {
 
         <div
           ref={scrollContainerRef}
-          onScroll={handleScrollCheck}
+          onScroll={handleScroll}
           style={{
             display: "flex",
             gap: 30,
             overflowX: "auto",
             scrollbarWidth: "none",
-            msOverflowStyle: "none", // for Internet Explorer
-            scrollBehavior: "smooth", // smooth scrolling
+            msOverflowStyle: "none",
+            scrollBehavior: "smooth",
           }}
         >
-          {list.map((item) => (
+          {extendedList.map((item, index) => (
             <div
-              key={item.name}
+              key={index}
               id="_843_14323__Feature_text"
               style={{
-                // flex: "1",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "flex-start",
@@ -234,14 +226,14 @@ function Ingredients() {
               display: "flex",
               fontSize: "50px",
               border: "1px solid #13523B",
-              color: canScrollRight ? "#13523B" : "#ccc",
+              color: "#13523B",
               borderRadius: 30,
               padding: "0px 20px",
               margin: "auto 0px",
               height: "fit-content",
-              cursor: canScrollRight ? "pointer" : "not-allowed",
+              cursor: "pointer",
             }}
-            onClick={() => canScrollRight && scroll("right")}
+            onClick={() => scroll("right")}
           >
             <IoIosArrowRoundForward />
           </div>
@@ -261,14 +253,14 @@ function Ingredients() {
               display: "flex",
               fontSize: "50px",
               border: "1px solid #13523B",
-              color: canScrollLeft ? "#13523B" : "#ccc",
+              color: "#13523B",
               borderRadius: 30,
               padding: "0px 20px",
               margin: "auto 0px",
               height: "fit-content",
-              cursor: canScrollLeft ? "pointer" : "not-allowed",
+              cursor: "pointer",
             }}
-            onClick={() => canScrollLeft && scroll("left")}
+            onClick={() => scroll("left")}
           >
             <IoIosArrowRoundBack />
           </div>
@@ -277,14 +269,14 @@ function Ingredients() {
               display: "flex",
               fontSize: "50px",
               border: "1px solid #13523B",
-              color: canScrollRight ? "#13523B" : "#ccc",
+              color: "#13523B",
               borderRadius: 30,
               padding: "0px 20px",
               margin: "auto 0px",
               height: "fit-content",
-              cursor: canScrollRight ? "pointer" : "not-allowed",
+              cursor: "pointer",
             }}
-            onClick={() => canScrollRight && scroll("right")}
+            onClick={() => scroll("right")}
           >
             <IoIosArrowRoundForward />
           </div>

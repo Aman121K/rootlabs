@@ -95,90 +95,93 @@ function CustomerCard({ item, index }) {
                     style={{
                       color: "#fef8f3ff",
                       fontFamily: "Reckless TRIAL",
-                      fontSize: "18px",
+                      fontSize: "24px",
                       fontWeight: "400",
                       whiteSpace: "nowrap",
+                      fontFamily: 'Reckless TRIAL',
                     }}
                   >
-                    {item.name}
-                  </span>
-                  <span
-                    style={{
-                      color: "#fef8f3ff",
-                      fontFamily: "Matter-TRIAL",
-                      fontSize: "12px",
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    Certified personal trainer
-                  </span>
-                </div>
-                {/* Star Ratings */}
-                <div style={{ display: "flex", gap: "4px" }}>
-                  {[...Array(5)].map((_, index) => (
-                    <img
-                      key={index}
-                      src={yellow_star}
-                      alt={`Star_${index}`}
-                    />
-                  ))}
-                </div>
+                  {item.name}
+                </span>
+                <span
+                  style={{
+                    fontWeight:430,
+                    color: "#fef8f3ff",
+                    fontFamily: "Matter-TRIAL",
+                    fontSize: "16px",
+                    lineHeight:"19px",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  Certified personal trainer
+                </span>
+              </div>
+              {/* Star Ratings */}
+              <div style={{ display: "flex", gap: "4px" }}>
+                {[...Array(5)].map((_, index) => (
+                  <img
+                    key={index}
+                    src={yellow_star}
+                    alt={`Star_${index}`}
+                  />
+                ))}
               </div>
             </div>
-            <div
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              padding: "24.5px",
+              top: "calc(50% - 40px)",
+              display: "flex",
+              flexDirection: "column",
+              gap: "16px",
+              overflow: "hidden",
+              transform: isHovered ? "translateY(0%)" : "translateY(130%)",
+              transition: "transform 0.7s ease-in",
+            }}
+          >
+            <span
               style={{
-                position: "absolute",
-                padding: "24.5px",
-                top: "calc(50% - 40px)",
-                display: "flex",
-                flexDirection: "column",
-                gap: "16px",
-                overflow: "hidden",
-                transform: isHovered ? "translateY(0%)" : "translateY(130%)",
-                transition: "transform 0.7s ease-in",
+                color: "#fef8f3ff",
+                fontFamily: "Reckless TRIAL Light",
+                fontSize: "32px",
+                lineHeight: "36px",
+                textAlign: "left",
               }}
             >
-              <span
-                style={{
-                  color: "#fef8f3ff",
-                  fontFamily: "Reckless TRIAL Light",
-                  fontSize: "32px",
-                  lineHeight: "36px",
-                  textAlign: "left",
-                }}
-              >
-                The ashwagandha gummy has been a game-changer for me! It
-                helped me through stressful days and I also noticed a
-                significant improvement in my energy levels.
-              </span>
-            </div>
+              The ashwagandha gummy has been a game-changer for me! It
+              helped me through stressful days and I also noticed a
+              significant improvement in my energy levels.
+            </span>
+          </div>
+          <div style={{
+            position: "absolute",
+            top: "32px",
+            left: "32px",
+            transform: isHovered ? "translateY(0%)" : "translateY(-200%)",
+            transition: "transform 0.2s ease-in"
+          }}>
             <div style={{
-              position: "absolute",
-              top: "32px",
-              left: "32px",
-              transform:isHovered?"translateY(0%)":"translateY(-200%)",
-              transition: "transform 0.2s ease-in"
+              position: "relative",
+              height: "45px",
+              width: "45px",
             }}>
-              <div style={{
-                position: "relative",
-                height: "45px",
-                width: "45px",
-              }}>
-                <img
-                  src={quote}
-                  alt="quote"
-                  style={{
-                    position: "absolute",
-                    height: "45px",
-                    width: "45px",                 
-                   }}
-                />
-              </div>
+              <img
+                src={quote}
+                alt="quote"
+                style={{
+                  position: "absolute",
+                  height: "45px",
+                  width: "45px",
+                }}
+              />
             </div>
           </div>
         </div>
       </div>
     </div>
+    </div >
   );
 }
 
