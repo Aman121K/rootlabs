@@ -32,23 +32,27 @@ const GeneratedComponent = () => {
       name: "PAGES",
       list: [
         {
-          name: "Ashwagandha",
+          name: "Our products",
           link: "/our-products",
         },
         {
-          name: "Shilajit",
-          link: "/our-products",
+          name: "Science",
+          link: "/our-science",
         },
         {
-          name: "Turmeric",
-          link: "/our-products",
+          name: "About",
+          link: "/about",
         },
         {
-          name: "Sea Moss",
-          link: "/our-products",
+          name: "What else",
+          link: "/what-else",
         },
         {
-          name: "Contact Us",
+          name: "Blog",
+          link: "/blog",
+        },
+        {
+          name: "Contact us",
           link: "/contactForm",
         },
       ],
@@ -172,7 +176,6 @@ const GeneratedComponent = () => {
               style={{
                 position: "relative",
                 height: "120.0px",
-                width: "154.0px",
                 width: "100%",
                 display: "flex",
                 flexDirection: "column",

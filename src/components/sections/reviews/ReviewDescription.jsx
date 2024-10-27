@@ -12,7 +12,7 @@ function ReviewDescription() {
         justifyContent: "space-between",
         flexWrap: "wrap",
         gap: "32px",
-        width: "79%",
+        flex: "1",
       }}
     >
       <div
@@ -23,7 +23,7 @@ function ReviewDescription() {
           justifyContent: "flex-start",
           flexWrap: "nowrap",
           gap: "12px",
-          maxWidth: 700,
+          maxWidth: 600,
         }}
       >
         <div
