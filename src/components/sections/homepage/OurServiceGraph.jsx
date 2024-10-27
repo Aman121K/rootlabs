@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useIntersectionAnimation } from "../../../animation/useIntersectionAnimation";
 import Lottie from "lottie-react";
 import animationData from "../../../../assets/Flow 2.json";
-import GraphHome from '../../../../assets/graph-home.svg'
+import GraphHome from "../../../../assets/graph-home.svg";
 
 const GeneratedComponent = () => {
   const animation = "slideUp 0.5s ease-in forwards";
@@ -157,9 +157,8 @@ const GeneratedComponent = () => {
             padding: "5%",
           }}
         >
-          <img src={GraphHome} />
+          <img src={GraphHome} style={{ width: "100%" }} />
         </div>
-
       </div>
     </div>
   );

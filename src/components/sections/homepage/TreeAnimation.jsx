@@ -64,6 +64,15 @@ const GeneratedComponent = () => {
     React.createRef(),
   ]);
 
+  const spicesLabelRef = useRef([
+    React.createRef(),
+    React.createRef(),
+    React.createRef(),
+    React.createRef(),
+    React.createRef(),
+    React.createRef(),
+  ]);
+
   const topRef = useRef(null);
   const BottomRef = useRef(null);
 
@@ -74,49 +83,72 @@ const GeneratedComponent = () => {
     if (presentState.name === "Mushroom") return 3;
     return 4;
   };
+  const handleTitle = (id, isShow) => {
+    if (isShow) {
+      document.getElementById(id).style.opacity = "1";
+      document.getElementById(id).style.scale = "1";
+    } else {
+      document.getElementById(id).style.opacity = "0";
+      document.getElementById(id).style.scale = "0";
+    }
+  };
 
   useEffect(() => {
     const handleLottie = (value) => {
       if (value <= 100) {
         spicesRef.current[0].current.play(); // For values between 70 and 100
+        handleTitle(spicesLabelRef.current[0].current.id, true);
       } else {
         spicesRef.current[0].current.goToAndStop(0, true);
+        handleTitle(spicesLabelRef.current[0].current.id, false);
       }
 
       if (value < 70) {
         spicesRef.current[2].current.play(); // For values between 50 and 70
+        handleTitle(spicesLabelRef.current[2].current.id, true);
       } else {
         spicesRef.current[2].current.goToAndStop(0, true);
+        handleTitle(spicesLabelRef.current[2].current.id, false);
       }
 
       if (value < 50) {
         spicesRef.current[1].current.play(); // For values between 35 and 50
+        handleTitle(spicesLabelRef.current[1].current.id, true);
       } else {
         spicesRef.current[1].current.goToAndStop(0, true);
+        handleTitle(spicesLabelRef.current[1].current.id, false);
       }
 
       if (value < 35) {
         spicesRef.current[4].current.play(); // For values between 30 and 35
+        handleTitle(spicesLabelRef.current[4].current.id, true);
       } else {
         spicesRef.current[4].current.goToAndStop(0, true);
+        handleTitle(spicesLabelRef.current[4].current.id, false);
       }
       if (value == 0) {
         spicesRef.current[3].current.play(); // For values between 0 and 30
+        handleTitle(spicesLabelRef.current[3].current.id, true);
       } else {
         spicesRef.current[3].current.goToAndStop(0, true);
+        handleTitle(spicesLabelRef.current[3].current.id, false);
       }
 
       if (isSmallLayout) {
         if (value <= 68) {
           spicesRef.current[5].current.play(); // For values between 0 and 30
+          handleTitle(spicesLabelRef.current[5].current.id, true);
         } else {
           spicesRef.current[5].current.goToAndStop(0, true);
+          handleTitle(spicesLabelRef.current[5].current.id, false);
         }
       } else {
         if (value <= 30) {
           spicesRef.current[5].current.play(); // For values between 0 and 30
+          handleTitle(spicesLabelRef.current[5].current.id, true);
         } else {
           spicesRef.current[5].current.goToAndStop(0, true);
+          handleTitle(spicesLabelRef.current[5].current.id, false);
         }
       }
     };
@@ -237,6 +269,7 @@ const GeneratedComponent = () => {
   }, []);
 
   const labelStyle = {
+    transition: "all 0.5s ease",
     position: "absolute",
     top: "50%", // Adjust as needed
     transform: "translateY(-50%) translateX(50%)",
@@ -562,8 +595,13 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
-              {console.log(spicesRef.current[0].current)}
-              <div style={{ ...labelStyle, scale: 1 }}>Inulin</div>
+              <div
+                id="spice1Text1"
+                ref={spicesLabelRef.current[0]}
+                style={{ ...labelStyle, scale: 1 }}
+              >
+                Inulin
+              </div>
             </div>
 
             <div
@@ -587,6 +625,8 @@ const GeneratedComponent = () => {
                 autoplay={false}
               />
               <div
+                ref={spicesLabelRef.current[1]}
+                id="spice1Text2"
                 style={{
                   ...labelStyle,
                   top: isSmallLayout ? "85%" : "85%",
@@ -610,6 +650,7 @@ const GeneratedComponent = () => {
               }}
             >
               <Lottie
+                ref={spicesLabelRef.current[0]}
                 lottieRef={spicesRef.current[2]}
                 style={{
                   width: isSmallLayout ? 150 : 250,
@@ -620,6 +661,8 @@ const GeneratedComponent = () => {
                 autoplay={false}
               />
               <div
+                ref={spicesLabelRef.current[2]}
+                id="spice1Text3"
                 style={{
                   ...labelStyle,
                   top: "90%",
@@ -655,6 +698,8 @@ const GeneratedComponent = () => {
                 autoplay={false}
               />
               <div
+                id="spice1Text4"
+                ref={spicesLabelRef.current[3]}
                 style={{
                   ...labelStyle,
                   top: "90%",
@@ -688,6 +733,8 @@ const GeneratedComponent = () => {
                 autoplay={false}
               />
               <div
+                ref={spicesLabelRef.current[4]}
+                id="spice1Text5"
                 style={{
                   ...labelStyle,
                   top: "90%",
@@ -720,8 +767,9 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
-              {console.log(spicesRef.current[5])}
               <div
+                ref={spicesLabelRef.current[5]}
+                id="spice1Text6"
                 style={{
                   ...labelStyle,
                   top: "90%",

@@ -343,7 +343,7 @@ const GeneratedComponent = () => {
           alignItems: "flex-start",
           flexWrap: "nowrap",
           gap: "32px",
-          // overflowX: "scroll",
+          overflowX: "auto",
           padding: "64px 0px",
         }}
       >

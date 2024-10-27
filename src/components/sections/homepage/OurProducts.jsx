@@ -99,9 +99,9 @@ const GeneratedComponent = () => {
             style={{
               color: "#1e1e1eff",
               fontFamily: "Reckless TRIAL",
-              fontSize: "56px",
+              fontSize: isMobileLayout ? "32px" : "56px",
               fontWeight: "400",
-              lineHeight: "69.44px",
+              lineHeight: "1.6",
               letterSpacing: "1px",
               textAlign: "center",
               // height: "69.0px",
@@ -113,7 +113,7 @@ const GeneratedComponent = () => {
             <br
               className="mobile_break"
               style={{
-                display:  isMobileLayout ? "block" : "none",
+                display: isMobileLayout ? "block" : "none",
               }}
             />{" "}
             with Our Goodness
@@ -154,10 +154,7 @@ const GeneratedComponent = () => {
           ))}
         </div>
 
-        <ButtonComponent
-          label="View All"
-          theme="default"
-        />
+        <ButtonComponent label="View All" theme="default" />
       </div>
     </div>
   );
