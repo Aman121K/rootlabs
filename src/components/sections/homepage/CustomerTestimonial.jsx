@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import React from "react";
 import CustomerCard from "./CustomerCard";
-import hh1 from '../../../../assets/hh1.jpeg';
-import hh2 from '../../../../assets/hh2.jpeg';
-import hh3 from '../../../../assets/hh3.jpeg';
-import hh4 from '../../../../assets/hh4.jpeg';
-import hh_star from '../../../../assets/hh_star.svg';
-import customer1 from '../../../../assets/customer1.jpeg';
-import customer2 from '../../../../assets/customer2.jpeg';
+import hh1 from "../../../../assets/hh1.jpeg";
+import hh2 from "../../../../assets/hh2.jpeg";
+import hh3 from "../../../../assets/hh3.jpeg";
+import hh4 from "../../../../assets/hh4.jpeg";
+import hh_star from "../../../../assets/hh_star.svg";
+import customer1 from "../../../../assets/customer1.jpeg";
+import customer2 from "../../../../assets/customer2.jpeg";
 
 const GeneratedComponent = () => {
   const navigate = useNavigate();
@@ -64,12 +64,15 @@ const GeneratedComponent = () => {
               position: "relative",
             }}
           >
-            Our <span style={{
-              fontFamily: "Reckless TRIAL Regular Italic"
-            }}>
+            Our{" "}
+            <span
+              style={{
+                fontFamily: "Reckless TRIAL Regular Italic",
+              }}
+            >
               Customers
-            </span> Speak
-
+            </span>{" "}
+            Speak
           </span>
         </div>
 
@@ -105,8 +108,7 @@ const GeneratedComponent = () => {
               style={{
                 position: "relative",
                 overflow: "hidden",
-                background:
-                  `url(${hh1}) 100% / cover no-repeat`,
+                background: `url(${hh1}) 100% / cover no-repeat`,
                 borderColor: "#ffffffff",
                 borderStyle: "solid",
                 borderWidth: "1px",
@@ -126,8 +128,7 @@ const GeneratedComponent = () => {
               style={{
                 position: "relative",
                 overflow: "hidden",
-                background:
-                  `url(${hh2}) 100% / cover no-repeat`,
+                background: `url(${hh2}) 100% / cover no-repeat`,
                 borderColor: "#ffffffff",
                 borderStyle: "solid",
                 borderWidth: "1px",
@@ -147,8 +148,7 @@ const GeneratedComponent = () => {
               style={{
                 position: "relative",
                 overflow: "hidden",
-                background:
-                  `url(${hh3}) 100% / cover no-repeat`,
+                background: `url(${hh3}) 100% / cover no-repeat`,
                 borderColor: "#ffffffff",
                 borderStyle: "solid",
                 borderWidth: "1px",
@@ -168,8 +168,7 @@ const GeneratedComponent = () => {
               style={{
                 position: "relative",
                 overflow: "hidden",
-                background:
-                  `url(${hh4}) 100% / cover no-repeat`,
+                background: `url(${hh4}) 100% / cover no-repeat`,
                 borderColor: "#ffffffff",
                 borderStyle: "solid",
                 borderWidth: "1.5px",
@@ -344,39 +343,33 @@ const GeneratedComponent = () => {
           alignItems: "flex-start",
           flexWrap: "nowrap",
           gap: "32px",
-          overflowX: "scroll",
+          // overflowX: "scroll",
           padding: "64px 0px",
         }}
       >
         {[
           {
-            image:
-              customer1,
+            image: customer1,
             name: "Shannon Decker",
             description:
               "The ashwagandha gummy has been a game-changer for me! It helped me through stressful days and I also noticed a significant improvement in my energy levels.",
           },
           {
-            image:
-              customer2,
+            image: customer2,
             name: "Shannon Decker",
             description:
               "The ashwagandha gummy has been a game-changer for me! It helped me through stressful days and I also noticed a significant improvement in my energy levels.",
           },
           {
-            image:
-              customer1,
+            image: customer1,
             name: "Shannon Decker",
             description:
               "The ashwagandha gummy has been a game-changer for me! It helped me through stressful days and I also noticed a significant improvement in my energy levels.",
-          }
-
+          },
         ].map((item, index) => (
           <CustomerCard key={index} item={item} index={index} />
         ))}
       </div>
-
-
     </div>
   );
 };

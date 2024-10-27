@@ -238,9 +238,9 @@ const GeneratedComponent = () => {
 
   const labelStyle = {
     position: "absolute",
-    // bottom: "-20px", // Adjust as needed
-    left: "50%",
-    // transform: "translateX(-50%)",
+    top: "50%", // Adjust as needed
+    transform: "translateY(-50%) translateX(50%)",
+    right: "0",
     color: "white",
     fontSize: isSmallLayout ? "18px" : "20px",
     fontFamily: "Matter-TRIAL",
@@ -455,7 +455,7 @@ const GeneratedComponent = () => {
           <div
             style={{
               position: "relative",
-              width: isSmallLayout ? 370 : 1200,
+              width: isSmallLayout ? 320 : 1200,
               height: "100%",
               margin: "0px auto",
             }}
@@ -562,7 +562,8 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
-              {/* <div style={labelStyle}>Inulin</div> */}
+              {console.log(spicesRef.current[0].current)}
+              <div style={{ ...labelStyle, scale: 1 }}>Inulin</div>
             </div>
 
             <div
@@ -585,7 +586,17 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
-              {/* <div style={labelStyle}>Shilajit</div> */}
+              <div
+                style={{
+                  ...labelStyle,
+                  top: isSmallLayout ? "85%" : "85%",
+                  left: isSmallLayout ? "50%" : "30%",
+                  transform: "translateX(-50%)",
+                  width: "max-content",
+                }}
+              >
+                Shilajit
+              </div>
             </div>
 
             <div
@@ -608,7 +619,19 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
-              {/* <div style={labelStyle}>Gokshura</div> */}
+              <div
+                style={{
+                  ...labelStyle,
+                  top: "90%",
+                  left: isSmallLayout ? "10%" : "50%",
+                  transform: isSmallLayout
+                    ? "translateX(0%)"
+                    : "translateX(-50%)",
+                  width: "max-content",
+                }}
+              >
+                Gokshura
+              </div>
             </div>
 
             <div
@@ -631,7 +654,17 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
-              {/* <div style={labelStyle}>Gokshura</div> */}
+              <div
+                style={{
+                  ...labelStyle,
+                  top: "90%",
+                  left: "20%",
+                  transform: "translateX(-50%)",
+                  width: "max-content",
+                }}
+              >
+                Ashwagandha
+              </div>
             </div>
 
             <div
@@ -654,7 +687,17 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
-              {/* <div style={labelStyle}>KSM-66</div> */}
+              <div
+                style={{
+                  ...labelStyle,
+                  top: "90%",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  width: "max-content",
+                }}
+              >
+                Black Musli
+              </div>
             </div>
 
             <div
@@ -668,6 +711,9 @@ const GeneratedComponent = () => {
               }}
             >
               <Lottie
+                onComplete={(ele) => {
+                  console.log(ele);
+                }}
                 lottieRef={spicesRef.current[5]}
                 style={{
                   width: isSmallLayout ? 150 : 250,
@@ -677,7 +723,15 @@ const GeneratedComponent = () => {
                 loop={false}
                 autoplay={false}
               />
-              {/* <div style={labelStyle}>Gokshura</div> */}
+              <div
+                style={{
+                  ...labelStyle,
+                  top: "90%",
+                  left: isSmallLayout ? "-10%" : "10%",
+                }}
+              >
+                Ginseng
+              </div>
             </div>
 
             {/* <div

@@ -188,7 +188,21 @@ function HowItWorks() {
             </span>
           </div>
         </div>
-
+        <div
+            id="_843_14287_Button_default"
+            style={{
+              overflow: "hidden",
+              height: "56.0px",
+              width: "fit-content",
+              alignSelf: "center",
+            }}
+          >
+            <ArrowButton
+              label="Subscribe Now"
+              theme="white"
+              onClick={() => window.scrollTo(0, 0)}
+            />
+          </div>
         <div
           id="_843_14231_Frame_2018776432"
           style={{
@@ -219,9 +233,10 @@ function HowItWorks() {
                 overflowX: "scroll",
                 gap: "32px",
                 margin: "auto",
-                height: "520px",
+                minHeight: "40vw",
                 scrollbarWidth: "none", // for Firefox
                 msOverflowStyle: "none",
+                width: "100%",
               }}
             >
               {monthsData.map((item, index) => {
@@ -239,21 +254,7 @@ function HowItWorks() {
             </div>
           </div>
 
-          <div
-            id="_843_14287_Button_default"
-            style={{
-              overflow: "hidden",
-              height: "56.0px",
-              width: "fit-content",
-              alignSelf: "center",
-            }}
-          >
-            <ArrowButton
-              label="Subscribe Now"
-              theme="white"
-              onClick={() => window.scrollTo(0, 0)}
-            />
-          </div>
+       
         </div>
       </div>
     </div>
