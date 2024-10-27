@@ -18,7 +18,7 @@ const GeneratedComponent = () => {
             }
           }
         `}
-  </style>
+  </style>;
   const animation = "slideUp 0.7s ease-in forwards";
   const textRef = useIntersectionAnimation(animation, { threshold: 0.1 });
   const [animationProgress, setAnimationProgress] = useState(0);
@@ -79,7 +79,7 @@ const GeneratedComponent = () => {
         const scrollProgress = Math.min(
           Math.max(
             (windowHeight - rect.top - dynamicOffset) /
-            (windowHeight + rect.height),
+              (windowHeight + rect.height),
             0
           ),
           1
@@ -87,7 +87,10 @@ const GeneratedComponent = () => {
 
         // Set the progress for both Lottie animations based on scroll progress
         const lottie1Progress = Math.min(1, scrollProgress * 2); // Scale progress for first Lottie
-        const lottie2Progress = Math.min(Math.min(1, scrollProgress * 2), 0.3903604); // 3.603604 Scale progress for second Lottie
+        const lottie2Progress = Math.min(
+          Math.min(1, scrollProgress * 2),
+          0.3903604
+        ); // 3.603604 Scale progress for second Lottie
         // lottieRef2.current.style.transform = `translateY( -${scrollProgress}px)`; // Move the second Lottie animation
         // if (lottieRef1.current) {
         //   lottieRef1.current.goToAndStop(lottie1Progress * 200, true); // Assuming 100 frames
@@ -117,7 +120,7 @@ const GeneratedComponent = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        height: "1100px"
+        // height: "1100px",
       }}
     >
       <div
@@ -193,14 +196,13 @@ const GeneratedComponent = () => {
         </div>
       </div>
 
-
       <div
         ref={animationContainerRef}
         style={{
-          textAlign:"center",
+          textAlign: "center",
           position: "relative",
           width: "200%",
-          maxWidth: "1000px",
+          maxWidth: "1600px",
           aspectRatio: "1/1",
           // top:"-200px"
         }}
@@ -211,6 +213,8 @@ const GeneratedComponent = () => {
             position: "absolute",
             width: "100%",
             top: "25%",
+            // zIndex:3,
+            // mixBlendMode:"darken"
             // left: "1%",
             // bottom:"5%"
             // transform: "translateX(-50%)",
@@ -220,35 +224,37 @@ const GeneratedComponent = () => {
           loop={false}
           autoplay={false} // Autoplay is false since we're controlling progress via scroll
         />
-          <Lottie
-            style={{
-              // left: "50%",
-              // transform: "translateX(-50%)",
-              position: "absolute",
-              width: "70%",
-              left: "15%",
-              // minWidth: "500px"
-            }}
-            id="firstLottie"
-            lottieRef={lottieRef1}
-            animationData={animationData}
-            loop={true}
-            autoplay={true} // Autoplay is false for scroll control
-          />
-        </div>
-        <div style={{
-          width: '200px',
-          height: '400px',
-          transform: 'rotate(90deg) ',
-          position: 'absolute',
+        <Lottie
+          style={{
+            // left: "50%",
+            // transform: "translateX(-50%)",
+            position: "absolute",
+            width: "70%",
+            left: "15%",
+            // minWidth: "500px"
+          }}
+          id="firstLottie"
+          lottieRef={lottieRef1}
+          animationData={animationData}
+          loop={true}
+          autoplay={true} // Autoplay is false for scroll control
+        />
+      </div>
+      <div
+        style={{
+          width: "200px",
+          height: "400px",
+          transform: "rotate(90deg) ",
+          position: "absolute",
           bottom: "-10%",
           left: "40%",
           filter: "blur(10px)",
-          background: 'radial-gradient(circle at -30% 50%, transparent 10%, #F2F0E8 51%)',
-          borderRadius: '50%',
-        }}>
-        </div>
-      </div>
+          background:
+            "radial-gradient(circle at -30% 50%, transparent 10%, #F2F0E8 51%)",
+          borderRadius: "50%",
+        }}
+      ></div>
+    </div>
   );
 };
 

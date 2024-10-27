@@ -2,30 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
   font-family: "Matter-TRIAL";
-  src: url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Regular.woff2") format("woff2"),
-    url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Regular.woff") format("woff"),
-    url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Regular.woff2")
+      format("woff2"),
+    url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Regular.woff")
+      format("woff"),
+    url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Regular.ttf")
+      format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Matter-TRIAL-Light";
-  src: url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Light.woff2") format("woff2"),
-    url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Light.woff") format("woff"),
-    url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Light.ttf") format("truetype");
+  src: url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Light.woff2")
+      format("woff2"),
+    url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Light.woff")
+      format("woff"),
+    url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Light.ttf")
+      format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Matter-TRIAL-Medium";
-  src: url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Medium.woff2") format("woff2"),
-    url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Medium.woff") format("woff"),
-    url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Medium.ttf") format("truetype");
+  src: url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Medium.woff2")
+      format("woff2"),
+    url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Medium.woff")
+      format("woff"),
+    url("../assets/fonts/DP_matter_TRIAL/Matter-TRIAL-Medium.ttf")
+      format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -41,45 +49,60 @@
 
 @font-face {
   font-family: "Reckless TRIAL";
-  src: url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Regular.woff2") format("woff2"),
-    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Regular.woff") format("woff"),
-    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Regular.otf") format("opentype");
+  src: url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Regular.woff2")
+      format("woff2"),
+    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Regular.woff")
+      format("woff"),
+    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Regular.otf")
+      format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Reckless TRIAL Bold";
-  src: url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Bold.woff2") format("woff2"),
-    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Bold.woff") format("woff"),
-    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Bold.otf") format("opentype");
+  src: url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Bold.woff2")
+      format("woff2"),
+    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Bold.woff")
+      format("woff"),
+    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Bold.otf")
+      format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Reckless TRIAL Light";
-  src: url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Light.woff2") format("woff2"),
-    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Light.woff") format("woff"),
-    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Light.otf") format("opentype");
+  src: url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Light.woff2")
+      format("woff2"),
+    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Light.woff")
+      format("woff"),
+    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-Light.otf")
+      format("opentype");
   font-weight: light;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Reckless TRIAL Italic";
-  src: url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-LightItalic.otf") format("woff2"),
-    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-LightItalic.woff") format("woff"),
-    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-LightItalic.otf") format("opentype");
+  src: url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-LightItalic.otf")
+      format("woff2"),
+    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-LightItalic.woff")
+      format("woff"),
+    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-LightItalic.otf")
+      format("opentype");
   font-weight: light;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Reckless TRIAL Regular Italic";
-  src: url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-RegularItalic.otf") format("woff2"),
-    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-RegularItalic.woff") format("woff"),
-    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-RegularItalic.otf") format("opentype");
+  src: url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-RegularItalic.otf")
+      format("woff2"),
+    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-RegularItalic.woff")
+      format("woff"),
+    url("../assets/fonts/DP_reckless_TRIAL/RecklessTRIAL-RegularItalic.otf")
+      format("opentype");
   font-weight: light;
   font-style: normal;
 }
@@ -90,10 +113,7 @@
   position: relative;
 } */
 
-
-#_843_14234_Frame_1820554911:hover 
-
-#_64_681_Frame_1820554715 span:hover {
+#_843_14234_Frame_1820554911:hover #_64_681_Frame_1820554715 span:hover {
   cursor: pointer;
 }
 
@@ -237,7 +257,6 @@
   }
 }
 
-
 @keyframes strokeAnimation {
   0% {
     stroke-dashoffset: 339.29;
@@ -265,7 +284,6 @@
   }
 }
 
-
 @media only screen and (max-width: 768px) {
   /* #product_animation_lottie{
     top: 0px !important;
@@ -276,14 +294,16 @@
     max-height: fit-content;
   }
 
-  #_64_916_Ellipse_15, #_64_916_Ellipse_1599, #_64_1204_E99 {
+  #_64_916_Ellipse_15,
+  #_64_916_Ellipse_1599,
+  #_64_1204_E99 {
     display: none !important;
   }
-  #cart_container>div {
+  #cart_container > div {
     padding: 24px 20px !important;
   }
 
-  #cart_container>div:last-of-type {
+  #cart_container > div:last-of-type {
     padding: 10px 20px !important;
   }
 
@@ -292,7 +312,8 @@
   }
 
   #Expand_Your_Roots_with_Our_Goodness {
-    font-size: 40px !important;
+    font-size: 36px !important;
+    line-height: 1 !important;
   }
 
   #_64_734_image {
@@ -382,7 +403,7 @@
   .mobile_break {
     display: block;
   }
-  
+
   #_843_146042_Button_default {
     display: none !important;
   }
@@ -400,7 +421,21 @@
   #_1051_3144_Frame_2018776319 {
     padding: 64px 20px !important;
   }
-
+  #_64_791_Frame_1820554706 {
+    border-radius: 20px !important;
+  }
+  #_64_735_Frame_2018776334 {
+    padding: 64px 0 !important;
+  }
+  #_64_992_Frame_2018776307 {
+    padding-inline: 0 !important;
+  }
+  #_64_1025_Frame_2018776308 {
+    justify-content: center !important;
+  }
+  #_64_1046_Frame_2018776309 {
+    padding-inline: 20px !important;
+  }
   #Customer_Product_Reviews,
   #technology_heading {
     font-size: 30px !important;
@@ -416,7 +451,8 @@
 
   #_64_1_ROOT,
   #_64_1_LABS {
-    width: calc(70% - 64px) !important;
+    width: calc(100% - 64px) !important;
+    margin-bottom: 20px;
   }
 
   #_64_1176_Frame_201877627367 {
@@ -464,7 +500,7 @@
 }
 
 @media (max-width: 500px) {
-  #_1051_3144_Frame_2018776319{
+  #_1051_3144_Frame_2018776319 {
     height: 1000px !important;
   }
   #hero_video {
@@ -473,7 +509,6 @@
 }
 
 @media (max-width: 1363px) {
-
   /* #_64_1103_Button_default {
         width: 100% !important;
     } */
@@ -513,13 +548,10 @@
   #_1051_3144_Frame_2018776319 {
     height: 850px !important;
   }
-  
 }
 
 @media (max-width: 390px) {
   #_1051_3144_Frame_2018776319 {
     height: 800px !important;
   }
-  
 }
-

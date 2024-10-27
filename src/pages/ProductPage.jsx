@@ -101,6 +101,7 @@ function ProductPage() {
         id="product_id"
         style={{
           display: "flex",
+          alignItems: "flex-start",
           flexWrap: isMobileLayout ? "nowrap" : "wrap",
           padding: "0px 40px",
           gap: 10,
@@ -111,10 +112,10 @@ function ProductPage() {
         <div
           style={{
             flex: 1,
-            overflowY: "auto",
-            maxHeight: "80vh",
+            // overflowY: "auto",
+            // maxHeight: "80vh",
             paddingRight: "20px",
-            scrollbarWidth: "none",
+            // scrollbarWidth: "none",
           }}
         >
           <ProductImages
@@ -126,7 +127,7 @@ function ProductPage() {
         <div
           style={{
             position: "sticky",
-            top: "120px",
+            top: "-120px",
             flexBasis: isMobileLayout ? "100%" : "40%",
             display: "flex",
             flexDirection: "column",

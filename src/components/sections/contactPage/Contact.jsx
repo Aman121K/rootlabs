@@ -4,9 +4,9 @@ import "./Contact.css";
 import GenerateComponent from "../Header";
 import GeneratedComponent from "../Footer";
 import Toast from "../../toast/Toast";
-import ChatIcon from '../../../../assets/chats.svg'
-import PhoneIcon from '../../../../assets/call.svg'
-import LocationIcon from '../../../../assets/location.svg'
+import ChatIcon from "../../../../assets/chats.svg";
+import PhoneIcon from "../../../../assets/call.svg";
+import LocationIcon from "../../../../assets/location.svg";
 
 const ContactSupport = () => {
   const [formData, setFormData] = useState({
@@ -27,7 +27,10 @@ const ContactSupport = () => {
   useEffect(() => {
     // Scroll to the main content when the component mounts
     if (mainContentRef.current) {
-      mainContentRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      mainContentRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     }
   }, []);
 
@@ -62,7 +65,11 @@ const ContactSupport = () => {
   return (
     <div>
       <GenerateComponent />
-      <div ref={mainContentRef} style={{ marginTop: 100 }} className="contact-container">
+      <div
+        ref={mainContentRef}
+        style={{ marginTop: 100 }}
+        className="contact-container"
+      >
         <div className="contact-header">
           <div className="icon-circle">
             <Headphones className="icon" />
@@ -70,7 +77,7 @@ const ContactSupport = () => {
           <h1>Contact Support</h1>
           <p>Contact us regarding any concerns or inquiries.</p>
         </div>
-
+        <hr />
         <div className="contact-content">
           <div className="contact-info">
             <h2 className="uppercase-title">WE ARE HERE FOR YOU</h2>
@@ -78,7 +85,7 @@ const ContactSupport = () => {
 
             <div className="contact-methods">
               <div className="contact-method">
-                <img src={ChatIcon} className="method-icon"/>
+                <img src={ChatIcon} className="method-icon" />
                 {/* <MessageSquare className="method-icon" /> */}
                 <div className="method-details">
                   <h4>Chat to us</h4>
@@ -88,8 +95,8 @@ const ContactSupport = () => {
               </div>
 
               <div className="contact-method">
-              <img src={PhoneIcon} className="method-icon"/>
-             
+                <img src={PhoneIcon} className="method-icon" />
+
                 <div className="method-details">
                   <h4>Phone</h4>
                   <p>Mon-Fri from 8am to 5pm.</p>
@@ -98,7 +105,7 @@ const ContactSupport = () => {
               </div>
 
               <div className="contact-method">
-              <img src={LocationIcon} className="method-icon"/>
+                <img src={LocationIcon} className="method-icon" />
                 <div className="method-details">
                   <h4>Office</h4>
                   <p>Come say hello at our office HQ.</p>
@@ -120,7 +127,6 @@ const ContactSupport = () => {
                   value={formData.fullName}
                   onChange={handleChange}
                   required
-                
                 />
               </div>
 
@@ -151,7 +157,9 @@ const ContactSupport = () => {
                     color: formData.state ? "black" : "#919DA8",
                   }}
                 >
-                  <option disabled className="select-placeholder" value="">Please Select Your State</option>
+                  <option disabled className="select-placeholder" value="">
+                    Please Select Your State
+                  </option>
                   <option value="state1">State 1</option>
                   <option value="state2">State 2</option>
                 </select>
@@ -165,7 +173,9 @@ const ContactSupport = () => {
                     color: formData.state ? "black" : "#919DA8",
                   }}
                 >
-                  <option disabled className="select-placeholder" value="">Please Select Your City</option>
+                  <option disabled className="select-placeholder" value="">
+                    Please Select Your City
+                  </option>
                   <option value="city1">City 1</option>
                   <option value="city2">City 2</option>
                 </select>
@@ -188,6 +198,9 @@ const ContactSupport = () => {
                   name="acknowledged"
                   checked={formData.acknowledged}
                   onChange={handleChange}
+                  style={{
+                    height: "auto",
+                  }}
                   required
                 />
                 <label>

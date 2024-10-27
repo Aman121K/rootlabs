@@ -134,9 +134,12 @@ const BouncingImage = () => {
       ref={canvasRef}
       style={{
         position: "absolute",
-        width: "calc(100% - 50px)",
-        height: "calc(100% - 50px)",
+        width: "100%",
+        height: "100%",
         // border: "1px solid black",
+        pointerEvents: "none",
+        bottom: 0,
+        left: 0,
       }}
     />
   );

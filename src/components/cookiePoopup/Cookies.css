@@ -1,115 +1,119 @@
 @import "../../fonts.css";
 
 .cookie-popup-overlay {
-    position: fixed;
-    bottom: 40px;
-    left: 56px;
-    z-index: 1000;
-    width: 434px;
-    height: 218px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    width: auto;
-    height: auto;
-    font-family: "Matter-TRIAL";
+  position: fixed;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 40px;
+  padding-left: 56px;
+  padding-right: 56px;
+  z-index: 1000;
+  width: 100%;
+  max-width: 434px;
+  height: 218px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  font-family: "Matter-TRIAL";
 }
 
 .cookie-popup {
-    background-color: white;
-    border-radius: 24px;
-    padding: 24px;
-    width: 434px;
-    height: 160px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    display: flex;
-    flex-direction: column;
+  background-color: white;
+  border-radius: 24px;
+  padding: 24px;
+  max-width: 434px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
-.cookie-banner button{
-    background: transparent;
-    border: none;
-    height: 48px;
-    width: 48px;
+.cookie-banner button {
+  background: transparent;
+  border: none;
+  height: 48px;
+  width: 48px;
 }
 
 .cookie-popup h2 {
-    font-size: 24px;
-    font-weight: 400;
-    color: #13523B;
-    line-height: 26.28px;
-    font-family: 'Reckless TRIAL';
-    /* padding: 5px; */
-    /* margin-bottom: 1rem; */
+  font-size: 24px;
+  font-weight: 400;
+  color: #13523b;
+  line-height: 26.28px;
+  font-family: "Reckless TRIAL";
+  /* padding: 5px; */
+  /* margin-bottom: 1rem; */
 }
 
-.cookie-heading,.cookie-heading{
-    margin: 0;
-    padding: 0;
+.cookie-heading,
+.cookie-heading {
+  margin: 0;
+  padding: 0;
 }
 
 .cookie-popup p {
-    margin-bottom: 20px;
-    font-size: 16px;
-    font-weight: 430;
-    line-height: 19px;
-    color: #1E1E1ECC;
-    font-family: 'Matter TRIAL';
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 430;
+  line-height: 19px;
+  color: #1e1e1ecc;
+  font-family: "Matter TRIAL";
 }
 
 .cookie-popup a {
-    color: #1E1E1ECC;
-    text-decoration: underline;
-    font-weight: 500;
+  color: #1e1e1ecc;
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 .cookie-popup a:hover {
-    color: #14532d;
+  color: #14532d;
 }
 
 /* Button group to align buttons horizontally */
 .button-group {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 
 /* Reject button styling */
 .reject-button {
-    width: 185px;
-    height: 56px;
-    background-color: transparent;
-    color: #13523B;
-    border: 2px solid #13523B;
-    border-radius: 24px;
-    padding: 0.5rem 2rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-family: 'Matter-TRIAL';
+  width: 185px;
+  height: 56px;
+  background-color: transparent;
+  color: #13523b;
+  border: 2px solid #13523b;
+  border-radius: 24px;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "Matter-TRIAL";
 }
 
 .reject-button:hover {
-    background-color: #f1f5f9;
+  background-color: #f1f5f9;
 }
 
 .accept-button {
-    width: 185px;
-    height: 56px;
-    background-color: #13523B;
-    color: white;
-    border: none;
-    border-radius: 24px;
-    padding: 0.5rem 2rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Matter-TRIAL';
+  width: 185px;
+  height: 56px;
+  background-color: #13523b;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Matter-TRIAL";
 }
 
 .accept-button:hover {
-    background-color: #14532d;
+  background-color: #14532d;
 }
 
 /* .cookie-banner{
@@ -123,53 +127,64 @@
 } */
 
 .cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    max-width: 100vw;
-    height: 96px;
-    background-color: #13523B;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem; 
-    box-sizing: border-box;
-    z-index: 1000;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden; 
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100vw;
+  height: 96px;
+  background-color: #13523b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  box-sizing: border-box;
+  z-index: 1000;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .cookie-banner p {
-    margin: 0;
-    font-size: 1rem;
-    flex: 1;
-    padding-right: 1rem;
+  margin: 0;
+  font-size: 1rem;
+  flex: 1;
+  padding-right: 1rem;
 }
 
 .cookie-banner a {
-    color: #ffffff;
-    text-decoration: underline;
-    font-weight: 500;
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 .cookie-banner a:hover {
-    color: #e2e8f0;
+  color: #e2e8f0;
 }
 
 .close-banner {
-    border: none;
-    color: #166534;
-    /* font-size: 1.5rem; */
-    font-weight: bold;
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    line-height: 1;
-    margin-left: auto; 
+  border: none;
+  color: #166534;
+  /* font-size: 1.5rem; */
+  font-weight: bold;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  line-height: 1;
+  margin-left: auto;
+}
+@media (max-width: 600px) {
+  .cookie-popup-overlay {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  .cookie-popup{
+    padding: 20px;
+    box-sizing: border-box;
+  }
 }

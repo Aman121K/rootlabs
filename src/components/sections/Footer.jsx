@@ -198,7 +198,8 @@ const GeneratedComponent = () => {
                     cursor: "pointer",
                   }}
                 >
-                  <span
+                  <Link
+                    to={item.link}
                     id="Ashwagandha"
                     style={{
                       color: "#e8ddd3ff",
@@ -210,11 +211,12 @@ const GeneratedComponent = () => {
                       height: "24.0px",
                       // width: "154.0px",
                       position: "relative",
+                      textDecoration: "none",
                       ...item.style,
                     }}
                   >
                     {item.name}
-                  </span>
+                  </Link>
                   {item.button ? (
                     <div
                       id="_64_1161_Frame_1820554689"
@@ -328,13 +330,19 @@ const GeneratedComponent = () => {
             textAlign: "center",
           }}
         >
-          <Link to="/terms-and-conditions" style={{ color: "#e8ddd3", textDecoration: "none" }}>
+          <Link
+            to="/terms-and-conditions"
+            style={{ color: "#e8ddd3", textDecoration: "none" }}
+          >
             Terms & Conditions
           </Link>{" "}
-          |{" "}
-          <Link to="/contactForm" style={{ color: "#e8ddd3", textDecoration: "none" }}>
+          {/* |{" "}
+          <Link
+            to="/contactForm"
+            style={{ color: "#e8ddd3", textDecoration: "none" }}
+          >
             Contact Us
-          </Link>
+          </Link> */}
         </span>
       </div>
     </div>

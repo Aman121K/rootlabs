@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import ButtonComponent from "../../common/ArrowButton.jsx";
 import { useIntersectionAnimation } from "../../../animation/useIntersectionAnimation.jsx";
 import video from "../../../../assets/BioVideo.mp4";
@@ -14,11 +14,25 @@ const GeneratedComponent = () => {
   const navigate = useNavigate();
 
   const videoRef = useRef(null);
+  const [isSmallLayout, setIsSmallLayout] = useState(window.innerWidth <= 1200);
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.play();
     }
+    const handleResize = () => {
+      if (window.innerWidth <= 1200) {
+        setIsSmallLayout(true);
+      } else {
+        setIsSmallLayout(false);
+      }
+    };
+
+    // Add resize event listener
+    window.addEventListener("resize", handleResize);
+
+    // Clean up event listener on unmount
+    return () => window.removeEventListener("resize", handleResize);
   });
   return (
     <div
@@ -41,12 +55,12 @@ const GeneratedComponent = () => {
       <div
         id="_64_709_Frame_2018776287"
         style={{
-          flex: "1 1 45%", 
+          flex: "1 1 45%",
           maxWidth: "500px",
           display: "flex",
           flexDirection: "column",
           justifyContent: "flex-start",
-          alignItems: "flex-start",
+          alignItems: isSmallLayout ? "center" : "flex-start",
           gap: "24px",
         }}
       >
@@ -160,11 +174,7 @@ const GeneratedComponent = () => {
                   width: "16.0px",
                 }}
               >
-                <img
-                  id="I64_"
-                  src={green_arrow}
-                  alt="Path"
-                />
+                <img id="I64_" src={green_arrow} alt="Path" />
               </div>
 
               <span
@@ -291,10 +301,7 @@ const GeneratedComponent = () => {
           </div>
         </div>
 
-        <ButtonComponent
-          label=" Our Science"
-          theme="green"
-        />
+        <ButtonComponent label=" Our Science" theme="green" />
       </div>
 
       <div
@@ -302,7 +309,7 @@ const GeneratedComponent = () => {
         style={{
           borderRadius: "26px",
           width: "598px",
-          height:" 522px",   
+          height: " 522px",
           mixBlendMode: "darken",
         }}
       >
