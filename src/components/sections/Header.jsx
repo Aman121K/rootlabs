@@ -328,7 +328,7 @@ const GenerateComponent = () => {
                 style={{ position: "absolute", left: "9.375%", top: "12.5%" }}
               />
             </div>
-            <span className="hidden md:block" style={{ ...styles.navText, fontWeight: "500" }}>Cart</span>
+            <span className="md:block" style={{ ...styles.navText, fontWeight: "500" }}>Cart</span>
           </div>
 
           <div

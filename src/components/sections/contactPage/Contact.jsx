@@ -75,7 +75,8 @@ const ContactSupport = () => {
 
             <div className="contact-methods">
               <div className="contact-method">
-                <MessageSquare className="method-icon" />
+                <img src="/assets/chats.svg" className="method-icon"/>
+                {/* <MessageSquare className="method-icon" /> */}
                 <div className="method-details">
                   <h4>Chat to us</h4>
                   <p>Our friendly team is here to help.</p>
@@ -84,7 +85,8 @@ const ContactSupport = () => {
               </div>
 
               <div className="contact-method">
-                <Phone className="method-icon" />
+              <img src="/assets/call.svg" className="method-icon"/>
+             
                 <div className="method-details">
                   <h4>Phone</h4>
                   <p>Mon-Fri from 8am to 5pm.</p>
@@ -93,7 +95,7 @@ const ContactSupport = () => {
               </div>
 
               <div className="contact-method">
-                <MapPin className="method-icon" />
+              <img src="/assets/location.svg" className="method-icon"/>
                 <div className="method-details">
                   <h4>Office</h4>
                   <p>Come say hello at our office HQ.</p>
@@ -115,6 +117,7 @@ const ContactSupport = () => {
                   value={formData.fullName}
                   onChange={handleChange}
                   required
+                
                 />
               </div>
 

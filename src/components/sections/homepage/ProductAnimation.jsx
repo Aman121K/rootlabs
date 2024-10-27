@@ -209,8 +209,8 @@ const GeneratedComponent = () => {
           id="product_animation_lottie"
           style={{
             position: "absolute",
-            width: "85%",
-            top: "27%",
+            width: "100%",
+            top: "25%",
             left: "5%",
             // bottom:"5%"
             // transform: "translateX(-50%)",
@@ -225,8 +225,8 @@ const GeneratedComponent = () => {
               // left: "50%",
               // transform: "translateX(-50%)",
               position: "absolute",
-              width: "85%",
-              left: "5%",
+              width: "70%",
+              left: "20%",
               // minWidth: "500px"
             }}
             id="firstLottie"

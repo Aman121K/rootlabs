@@ -301,8 +301,8 @@ const GeneratedComponent = () => {
         id="_64_734_image"
         style={{
           borderRadius: "26px",
-          // height: "522px",
-          width: "700px",
+          width: "598px",
+          height:" 522px",   
           mixBlendMode: "darken",
         }}
       >

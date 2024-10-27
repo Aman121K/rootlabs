@@ -20,7 +20,8 @@
   }
   
   .button-label {
-    font-family: 'Matter-TRIAL';
+    /* fontFamily: 'Matter-TRIAL, sans-serif' */
+    /* font-family: 'Matter-TRIAL'; */
     font-size: 20px;
     font-weight: 570;
     letter-spacing: -1%;

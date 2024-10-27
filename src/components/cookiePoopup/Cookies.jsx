@@ -21,8 +21,8 @@ const Cookies = () => {
       {isVisible && (
         <div className="cookie-popup-overlay">
           <div className="cookie-popup">
-            <h2>Cookie Settings</h2>
-            <p>
+            <h2 className="cookie-heading">Cookie Settings</h2>
+            <p className="cookie-description">
               By clicking “Accept All”, you consent to all defined categories of
               cookies including analytics and targeting cookies.{" "}
               <a href="/privacy-policy">Privacy Policy</a>
@@ -44,8 +44,8 @@ const Cookies = () => {
             including analytics and targeting cookies.{" "}
             <a href="/terms-and-conditions">Privacy Policy</a>
           </p>
-          <button className="close-banner" onClick={() => setShowBanner(false)}>
-            &times;
+          <button onClick={() => setShowBanner(false)}>
+           <img className="close-banner" src="/assets/cross-banner.svg" />
           </button>
         </div>
       )}

@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import './ArrowButton.css';
 import arrow from '../../../assets/arrow.svg';
 import green_arrow from "../../../assets/green_arrow.svg";
+import '../../fonts.css'
 
-const ButtonComponent = ({ 
-  label, 
-  onClick, 
+const ButtonComponent = ({
+  label,
+  onClick,
   theme = 'default' // Define a prop for selecting a theme
 }) => {
 
@@ -57,14 +58,14 @@ const ButtonComponent = ({
       }}
     >
       <div className="button-content">
-        <span 
-          className="button-label" 
-          style={{ color: selectedTheme.labelColor }}
+        <span
+          className="button-label"
+          style={{ color: selectedTheme.labelColor, fontFamily: 'Matter-TRIAL, sans-serif' }}
         >
           {label}
         </span>
-        <div 
-          className="button-icon" 
+        <div
+          className="button-icon"
           style={{ backgroundColor: selectedTheme.arrowBg }}
         >
           <img

@@ -60,8 +60,8 @@ const GeneratedComponent = () => {
             style={{
               color: "#fef8f3ff",
               fontFamily: "Matter-TRIAL",
-              fontSize: "16.0px",
-              fontWeight: "430",
+              fontSize: "20px",
+              fontWeight: "570",
               lineHeight: "26px",
               letterSpacing: "1.3px",
               textAlign: "left",
