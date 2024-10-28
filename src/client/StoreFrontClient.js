@@ -256,10 +256,18 @@ const createShopifyClient = (config) => {
 };
 
 // Example config
+// const config = {
+//   storeDomain: "http://a88a8f-3.myshopify.com",
+//   apiVersion: "2024-10",
+//   publicAccessToken: "5d920647f31145b21a1b015b8c4630c4",
+//   retries: 3, // Number of retry attempts
+//   retryDelay: 1000, // Initial delay for retries (ms)
+//   timeout: 5000, // Timeout for API calls (ms)
+// };
 const config = {
-  storeDomain: "http://a88a8f-3.myshopify.com",
+  storeDomain: "wmyrhe-3p.myshopify.com",
   apiVersion: "2024-10",
-  publicAccessToken: "5d920647f31145b21a1b015b8c4630c4",
+  publicAccessToken: "e5296621fe30ec212e29799e2275a3a2",
   retries: 3, // Number of retry attempts
   retryDelay: 1000, // Initial delay for retries (ms)
   timeout: 5000, // Timeout for API calls (ms)
